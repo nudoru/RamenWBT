@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<page>
+	
+	<config>
+		<!-- name of the page -->
+		<name>Testing Page</name>
+		<!-- type of page -->
+		<type>testing</type>
+		<!-- size -->
+		<pagesize></pagesize>
+		<!-- left, top, right, bottom -->
+		<pageborders>10,10,10,10</pageborders>
+	</config>
+	
+	<!-- 
+		On stage object data, text fields, etc
+		the target attrib of a <text> tag corresponts to a text field named "value_txt"
+	 -->
+	<pagecontent>
+		<!-- title, body, bodyleft and bodyright are adjusted based on page size and page borders -->
+		<text target="title"><![CDATA[Page Object Actions]]></text>
+		<text target="body"><![CDATA[To create custom functionality, with no new page template creation, the  Scientia framework allows you to apply XML driven “programming” to page  objects. These actions may occur when an object is first shown, after a certain  period of time or when a learner interactions when them.<ul><li>Animated fly ins (13 types are included as of now, more are easy to add)</li><li>Animated fly outs </li><li>Go to a web site</li><li>Go to a page in the course</li><li>Control a Flash animation (SWF) file object on the page (gotoAndPlay, gotoAndStop)</li><li>Control a movie clip in a Flash animation on the page</li><li>Show or hide another page object</li><li>Open a popup window</li><li>Send a command to a complex object</li><li>Change the page’s status</li></ul>]]></text>
+		<text target="bodyleft"><![CDATA[]]></text>
+		<text target="bodyright"><![CDATA[]]></text>
+	</pagecontent>
+
+	<!-- Page Objects go here -->
+	<sheet>
+		<!--<object type="text" id="text1" guid="">
+			<position>10,100</position>
+			<size>300,100</size>
+			<content><![CDATA[Click to set a page status]]></content>
+			<fontstyle size="18" color="0x006699" bold="false" italic="false" align="left" leading="1">Verdana</fontstyle>
+			<eventlist>
+				<event id="release" actionevent="release" actionresult="set_page_status" target="" data="passed" />
+			</eventlist>
+		</object>-->
+	</sheet>
+
+</page>

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<page>
+	
+	<config>
+		<!-- name of the page -->
+		<name>Testing Page</name>
+		<!-- type of page -->
+		<type>testing</type>
+		<!-- size -->
+		<pagesize>777,510</pagesize>
+		<!-- left, top, right, bottom -->
+		<pageborders>10,10,10,10</pageborders>
+		<!-- background image for the page -->
+		<pagebgimage></pagebgimage>
+		<!-- is this template running out side of the player? -->
+		<standalone>true</standalone>
+	</config>
+
+	<!-- 
+		On stage object data, text fields, etc
+		the target attrib of a <text> tag corresponts to a text field named "value_txt"
+	 -->
+	<pagecontent>
+		<!-- title, body, bodyleft and bodyright are adjusted based on page size and page borders -->
+		<text target="title"><![CDATA[Dynamic, image list]]></text>
+		<text target="body"><![CDATA[getlatin:100:200]]></text>
+		<text target="bodyleft"><![CDATA[]]></text>
+		<text target="bodyright"><![CDATA[]]></text>
+	</pagecontent>
+
+	<!-- Intearction data here -->
+	<interaction>
+		<list id="list1">
+			<settings>
+				<!--<itemsize>200</itemsize>
+				<itemposition>20,150</itemposition>
+				<itemspacing>25</itemspacing>
+				<datasize>400,300</datasize>
+				<dataposition>300,150</dataposition>-->
+			</settings>
+			<item id="item1">
+				<title><![CDATA[Item item item 1]]></title>
+				<text><![CDATA[getlatin:200:500]]></text>
+				<image url="assets/solo_female_100.jpg" x="" y="" width="100" height="100" />
+			</item>
+			<item id="item2">
+				<title><![CDATA[Item item item 2Item item item 2]]></title>
+				<text><![CDATA[getlatin:200:500]]></text>
+				<image url="assets/solo_male_100.jpg" x="" y="" width="100" height="100" />
+			</item>
+			<item id="item3">
+				<title><![CDATA[Item item item 3Item item item 3Item item item 3]]></title>
+				<text><![CDATA[getlatin:200:500]]></text>
+				<image url="assets/solo_female_100.jpg" x="" y="" width="100" height="100" />
+			</item>
+		</list>
+	</interaction>
+
+</page>

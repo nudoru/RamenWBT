@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<page>
+	
+	<config>
+		<!-- name of the page -->
+		<name>Testing Page</name>
+		<!-- type of page -->
+		<type>testing</type>
+		<!-- size -->
+		<pagesize>777,510</pagesize>
+		<!-- left, top, right, bottom -->
+		<pageborders>10,10,10,10</pageborders>
+		<!-- background image for the page -->
+		<pagebgimage></pagebgimage>
+		<!-- is this template running out side of the player? -->
+		<standalone>true</standalone>
+	</config>
+
+	<!-- 
+		On stage object data, text fields, etc
+		the target attrib of a <text> tag corresponts to a text field named "value_txt"
+	 -->
+	<pagecontent>
+		<!-- title, body, bodyleft and bodyright are adjusted based on page size and page borders -->
+		<text target="title"><![CDATA[Quizzing Template - Multiple Sliders]]></text>
+		<text target="body"><![CDATA[Rate each of the statements below. Click <b>Submit</b> when done.]]></text>
+		<text target="bodyleft"><![CDATA[]]></text>
+		<text target="bodyright"><![CDATA[]]></text>
+	</pagecontent>
+
+	<!-- Intearction data here -->
+	<interaction>
+		<question type="selection" subtype="" id="question1">
+			<instruction><![CDATA[Instructions for the question]]></instruction>
+			<settings>
+				<tries>2</tries>
+				<caaction>do_this</caaction>
+				<waaction>do_this_also</waaction>
+				<feedbacktype>popup</feedbacktype>
+				<showanswers>true</showanswers>
+				<resetonwa>true</resetonwa>
+				<randomizechoices>true</randomizechoices>
+			</settings>
+			<cafeedback><![CDATA[This is the correct feedback]]></cafeedback>
+			<wafeedback><![CDATA[Incorrect 1]]></wafeedback>
+			<wafeedback><![CDATA[Incorrect 2]]></wafeedback>
+			<wafeedback><![CDATA[Incorrect 3]]></wafeedback>
+			<matchcolumnlabel>Slider</matchcolumnlabel>
+			<choicecolumnlabel>Statement</choicecolumnlabel>
+			<selection>
+				<choice data="one" default="true">One</choice>
+				<choice data="two">Two</choice>
+				<choice data="three">Three</choice>
+				<choice data="four">Four</choice>
+				<choice data="five">Five</choice>
+				<choice data="six">Six</choice>
+			</selection>
+			<choice id="choice1">
+				<text><![CDATA[This is the first thing.]]></text>
+				<match>one</match>
+			</choice>
+			<choice id="choice2">
+				<text><![CDATA[This one should come before the third one.]]></text>
+				<match>two</match>
+			</choice>
+			<choice id="choice3">
+				<text><![CDATA[There are _____ lights.]]></text>
+				<match>three</match>
+			</choice>
+			<choice id="choice4">
+				<text><![CDATA[What's 2^2?]]></text>
+				<match>four</match>
+			</choice>
+			<choice id="choice5">
+				<text><![CDATA[How many fingers do you have?]]></text>
+				<match>five</match>
+			</choice>
+			<choice id="choice6">
+				<text><![CDATA[This comes after five.]]></text>
+				<match>six</match>
+			</choice>
+		</question>
+	</interaction>
+
+</page>

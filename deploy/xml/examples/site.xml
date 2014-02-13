@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<site>
+
+	<!-- Define metadata for the site -->
+	<meta>
+		<title>Ramen Development Test</title>
+		<version>1</version>
+		<lastupdate>05.22.08</lastupdate>
+		<author>Matt Perkins</author>
+		<notes></notes>
+	</meta>
+	
+	<!--configuration data -->
+	<config>
+		<!-- use keyboard navigation and controls in the player -->
+		<useplayerkeycommands>true</useplayerkeycommands>
+		<!-- show a pop up on player warning - useful for debugging during development -->
+		<showwarnings>false</showwarnings>
+		<!-- sound effects enabled? true or false -->
+		<sfxenabled>false</sfxenabled>
+		<!-- background audio enabled? true or false -->
+		<sbgenabled>false</sbgenabled>
+	</config>
+	
+	<lms>
+			<!--
+				none
+				SCORM
+				lectora
+			-->
+		<mode>scorm</mode>
+			<!-- if the mode is set to lectora, what page to navigate to on exit -->
+		<lectoraexitpage>a001_complete_page.html</lectoraexitpage>
+			<!--
+				entrance
+				* not yet implimented
+					*view_all_pages
+					*mastery_score
+					*mastery_score&allow_fail
+					*mastery_score&view_all_pages
+					*mastery_score&view_all_pages&allow_fail
+			-->
+		<completioncriteria>entrance</completioncriteria>
+			<!-- scoring features not yet implimented -->
+		<masteryscore>80</masteryscore>
+	</lms>
+	
+	<!--theme data -->
+	<theme>
+		<!-- site of the site area, where the menu and content is displayed. this area will be aligned per the params below -->
+		<size>750,450</size>
+		<!-- horizontal alignment in the borwser window: left, middle, right -->
+		<halign snap="10">middle</halign>
+		<!-- vertical alignment in the borwser window: top, middle, bottom -->
+		<valign snap="10">top</valign>
+		<!-- fade out the last page as the new page loads? -->
+		<fadelastpage>true</fadelastpage>
+		<!-- global default position of the loaded pages with in the site area -->
+		<pageposition>0,90</pageposition>
+		<!-- global default default size of pages -->
+		<pagesize>750,360</pagesize>
+		<!-- certain shared UI assets -->
+		<sharedresources>resources/shared_resources.swf</sharedresources>
+		<!-- navigation controls, menu, etc. -->
+		<navigationfile>resources/navigation.swf</navigationfile>
+		<!-- background of the site area -->
+		<interfacefile>resources/ui_bg.swf</interfacefile>
+		<!-- browser window background outside of the site area -->
+		<background>resources/background_tile.swf</background>
+		<!-- site over lay - will appear on top of all other site area assets -->
+		<overlayfile></overlayfile>
+		<!-- background audio file -->
+		<backgroundaudio>resources/audio_bg.swf</backgroundaudio>
+		<!-- sound effects file -->
+		<soundeffects>resources/audio_sfx.swf</soundeffects>
+		<!-- this is not currently used -->
+		<cssfile></cssfile>
+		<!-- external fonts file -->
+		<fontfile>resources/fonts.swf</fontfile>
+		<!-- 
+			list of font classes in the file 
+			Calibri is a REQUIRED file - it's used in the imageloader and lightbox classes
+		-->
+		<fontlist>Calibri,Verdana</fontlist>
+	</theme>
+	
+	<!-- 
+	define the site structure 
+		names and ID's MUST BE UNIQUE! navigation will not work correctly if there are identical names
+		nodes are major groups - must contain pages. cannot next a node inside of another. think of these as main menu items
+		pages are what is shown to the user
+	-->
+	<structure>
+		<module id="site" name="Site">
+			<node id="home" name="Home">
+				<page id="popuptest" toc="true" name="Pop up test" swf="templates/generictemplate.swf" xml="xml/popup_box.xml" />
+				
+				<page id="homepage" toc="true" name="Home Page" swf="templates/generictemplate.swf" xml="xml/default.xml" />
+				<page id="textoverload" name="Text Overload" swf="templates/generictemplate.swf" xml="xml/texttext.xml" />
+			</node>
+			
+			<node id="pageobject" name="Page Objects">
+				<page id="potext" name="Text" swf="templates/generictemplate.swf" xml="xml/po_text.xml" />
+				<page id="pographic" name="Graphic" swf="templates/generictemplate.swf" xml="xml/po_graphic.xml" />
+				<page id="pogradrect" name="Grad Rect" swf="templates/generictemplate.swf" xml="xml/po_gradrect.xml" />
+				<page id="pohotspot" name="Hotspot" swf="templates/generictemplate.swf" xml="xml/po_hotspot.xml" />
+				<page id="pobutton" name="Button" swf="templates/generictemplate.swf" xml="xml/po_button.xml" />
+				<!--<page id="poflv" name="FLV" swf="templates/generictemplate_flv.swf" xml="xml/po_flv.xml" />-->
+			</node>
+
+			<node id="pageobjectevents" name="Page Objects Events">
+				<page id="poeoverview" name="Overview" swf="templates/generictemplate.swf" xml="xml/po_events_overview.xml" />
+				<page id="poenavigation" name="Navigation" swf="templates/generictemplate.swf" xml="xml/po_events_navigational.xml" />
+				<page id="poetransition" name="Transition" swf="templates/generictemplate.swf" xml="xml/po_events_transitional.xml" />
+				<page id="poeforswfs" name="For SWFs" swf="templates/generictemplate.swf" xml="xml/po_events_forswfs.xml" />
+				<page id="poetimer" name="Timer" swf="templates/generictemplate.swf" xml="xml/po_events_timer.xml" />
+			</node>
+		</module>
+	</structure>
+</site>

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<page>
+	
+	<config>
+		<!-- name of the page -->
+		<name>Testing Page</name>
+		<!-- type of page -->
+		<type>testing</type>
+		<!-- size -->
+		<pagesize>750,360</pagesize>
+		<!-- left, top, right, bottom -->
+		<pageborders>10,10,10,10</pageborders>
+	</config>
+	
+	<!-- 
+		On stage object data, text fields, etc
+		the target attrib of a <text> tag corresponts to a text field named "value_txt"
+	 -->
+	<pagecontent>
+		<!-- title, body, bodyleft and bodyright are adjusted based on page size and page borders -->
+		<text target="title"><![CDATA[test]]></text>
+		<text target="body"><![CDATA[]]></text>
+		<text target="bodyleft"><![CDATA[]]></text>
+		<text target="bodyright"><![CDATA[]]></text>
+	</pagecontent>
+
+	<!-- Page Objects go here -->
+	<sheet>
+
+		<object type="interactiveswf" id="swf1" guid="">
+			<position>100,150</position>
+			<size>200,100</size>
+			<url startframe="1" playmode="none">assets/complexposwf.swf</url>
+			<objectdata>
+				<text><![CDATA[This is the text for the box]]></text>
+			</objectdata>
+		</object>
+
+		<object type="button" id="button1" guid="">
+			<position>10,50</position>
+			<size>100,22</size>
+			<url>assets/pobutton.swf</url>
+			<eventlist>
+				<event id="over" actionevent="rollover" actionresult="" target="" data="" />
+				<event id="out" actionevent="rollout" actionresult="" target="" data="" />
+				<event id="click" actionevent="click" actionresult="" target="" data="" />
+				<event id="release" actionevent="release" actionresult="" target="" data="" />
+			</eventlist>
+		</object>
+		
+	</sheet>
+
+</page>

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<theme>
+	<!-- site of the site area, where the menu and content is displayed. this area will be aligned per the params below -->
+	<size>814,642</size>
+	<!-- horizontal alignment in the borwser window: left, center, right -->
+	<halign snap="1">center</halign>
+	<!-- vertical alignment in the borwser window: top, middle, bottom -->
+	<valign snap="1">top</valign>
+	<!-- 
+		method of page to page transition:
+			none
+			xfade_quick
+			xfade_slow
+			slide
+			squeeze
+		
+	-->
+	<pagetransition>xfade_quick</pagetransition>
+	<!-- prevents page contents from overflowing off of the page -->
+	<croppagearea>false</croppagearea>
+	<!-- will add scroll bar to page area to view overflow -->
+	<scrollpagearea>false</scrollpagearea>
+	<!-- global default position of the loaded pages with in the site area -->
+	<pageposition>10,120</pageposition>
+	<!-- global default default size of pages, 16px width should be subtracted if pagescrolling is on -->
+	<pagesize>777,510</pagesize>
+	<!-- certain shared UI assets -->
+	<sharedresources>resources/bacbss/shared_resources.swf</sharedresources>
+	<!-- navigation controls, menu, etc. -->
+	<navigationfile>resources/bacbss/navigation.swf</navigationfile>
+	<!-- background of the site area -->
+	<interfacefile>resources/bacbss/ui_bg.swf</interfacefile>
+	<!-- browser window background outside of the site area -->
+	<background>resources/bacbss/background.swf</background>
+	<!-- site over lay - will appear on top of all other site area assets -->
+	<overlayfile></overlayfile>
+	<!-- background audio file -->
+	<backgroundaudio></backgroundaudio>
+	<!-- sound effects file -->
+	<soundeffects></soundeffects>
+	<!-- will be applied to all body text fields included popup messages -->
+	<cssfile>resources/bacbss/style.css</cssfile>
+	<!-- external fonts file -->
+	<fontfile>resources/bacwbt/fonts.swf</fontfile>
+	<!-- 
+		list of font classes in the file 
+		Calibri is a REQUIRED file - it's used in the imageloader and lightbox classes
+	-->
+	<fontlist>Calibri,Verdana</fontlist>
+	<!-- color of dynamically created hilights -->
+	<highlightcolor>0xff0000</highlightcolor>
+	<!-- solid, gradient, rounded:radius-->
+	<highlightstyle>rounded:10</highlightstyle>
+	<!-- hex values, typically a 5 color palette from kuler or colourlovers -->
+	<colors>0x42342C,0x737F76,0xB2B29B,0xDFE5E1,0x294359</colors>
+</theme>

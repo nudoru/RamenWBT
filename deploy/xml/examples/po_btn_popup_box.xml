@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<page>
+	
+	<config>
+		<!-- name of the page -->
+		<name>Testing Page</name>
+		<!-- type of page -->
+		<type>testing</type>
+		<!-- size -->
+		<pagesize>750,360</pagesize>
+		<!-- left, top, right, bottom -->
+		<pageborders>10,10,10,10</pageborders>
+	</config>
+	
+	<!-- 
+		On stage object data, text fields, etc
+		the target attrib of a <text> tag corresponts to a text field named "value_txt"
+	 -->
+	<pagecontent>
+		<!-- title, body, bodyleft and bodyright are adjusted based on page size and page borders -->
+		<text target="title"><![CDATA[Pop up testing]]></text>
+		<text target="body"><![CDATA[]]></text>
+		<text target="bodyleft"><![CDATA[]]></text>
+		<text target="bodyright"><![CDATA[Click the buttons to view a simple popup message.]]></text>
+	</pagecontent>
+
+	<!-- Page Objects go here -->
+	<sheet>
+
+		<object type="button" id="button1" guid="">
+			<position>10,50</position>
+			<size>100,22</size>
+			<url>assets/pobutton.swf</url>
+			<eventlist>
+				<event id="over" actionevent="rollover" actionresult="" target="" data="" />
+				<event id="out" actionevent="rollout" actionresult="" target="" data="" />
+				<event id="click" actionevent="click" actionresult="show_popup" target="" data="">
+					<data>
+						<popup id="testpopup" draggable="true">
+							<type modal="false" persistant="false">custom</type>
+							<title>Sheet in a pop up</title>
+							<content><![CDATA[getlatin:50,100]]></content>
+							<hpos>middle</hpos>
+							<vpos>high_center</vpos>
+							<size>500,500</size>
+							<buttons>
+								<button event="close" data="blah">Dismiss</button>
+							</buttons>
+							<sheet>
+								<object type="graphic" id="graphic1" guid="">
+									<position>-10,45</position>
+									<size>250,250</size>
+									<scale>100,100</scale>
+									<rotation>-10</rotation>
+									<start mode="show" />
+									<transitionin effect="zoom_out" delay="0" mode="play" />
+									<borderstyle></borderstyle>
+									<borderwidth>10</borderwidth>
+									<shadow>true</shadow>
+									<caption>This is a caption</caption>
+									<url startframe="3" playmode="none">assets/mframe.swf</url>
+									<eventlist>
+										<event id="click" actionevent="click" actionresult="show_popup" target="" data="">
+											<data>
+												<popup id="testpopup3" draggable="true">
+													<type modal="false" persistant="false">simple</type>
+													<title>Closing this will go to the next player page</title>
+													<content><![CDATA[getlatin:50,100]]></content>
+													<hpos>middle</hpos>
+													<vpos>high_center</vpos>
+													<buttons>
+														<button event="close" data="player_nextpage">Dismiss</button>
+													</buttons>
+												</popup>
+											</data>
+										</event>
+									</eventlist>
+								</object>
+								<object type="gradrect" id="rect1" guid="">
+									<position>10,50</position>
+									<size>300,100</size>
+									<linecolor>0xff0000</linecolor>
+									<lightcolor>0x00ff00</lightcolor>
+									<darkcolor>0x0000ff</darkcolor>
+									<shadow>false</shadow>
+									<reflection>true</reflection>
+								</object>
+								<object type="gradroundrect" id="rect2" guid="">
+									<position>10,210</position>
+									<size>300,100</size>
+									<radius>20</radius>
+									<linecolor>0xff0000</linecolor>
+									<lightcolor>0x00ff00</lightcolor>
+									<darkcolor>0x0000ff</darkcolor>
+									<shadow>false</shadow>
+									<reflection>true</reflection>
+								</object>
+								<object type="shape" id="text1" guid="">
+									<transitionin effect="drop_from_top" delay="0" mode="play" />
+									<position>100,100</position>
+									<size>300,100</size>
+									<shape>ellipse</shape>
+									<radius>50</radius>
+									<linecolor>0xff0000</linecolor>
+									<linealpha>1</linealpha>
+									<linethickness>5</linethickness>
+									<fillcolor>0x0000ff</fillcolor>
+									<fillalpha>1</fillalpha>
+								</object>
+								<object type="textbox" id="text3" guid="">
+									<position>400,150</position>
+									<size>200,100</size>
+									<content><![CDATA[getlatin:20,30]]></content>
+									<radius>20</radius>
+									<linecolor>0x999999</linecolor>
+									<lightcolor>0eeeeee</lightcolor>
+									<darkcolor>0xcccccc</darkcolor>
+									<borderwidth>5</borderwidth>
+									<shadow>true</shadow>
+									<reflection>false</reflection>
+									<scrolling>false</scrolling>
+									<fontstyle size="10" color="0x000001" bold="false" italic="false" align="center" leading="1">Verdana</fontstyle>
+								</object>
+							</sheet>
+						</popup>
+					</data>
+				</event>
+				<event id="release" actionevent="release" actionresult="" target="" data="" />
+			</eventlist>
+		</object>
+		<object type="button" id="button2" guid="">
+			<position>10,100</position>
+			<size>100,22</size>
+			<url>assets/pobutton.swf</url>
+			<eventlist>
+				<event id="over" actionevent="rollover" actionresult="" target="" data="" />
+				<event id="out" actionevent="rollout" actionresult="" target="" data="" />
+				<event id="click" actionevent="click" actionresult="show_popup" target="" data="">
+					<data>
+						<popup id="testpopup2" draggable="true">
+							<type modal="false" persistant="false">simple</type>
+							<title>Closing this will go to the next player page</title>
+							<content><![CDATA[getlatin:50,100]]></content>
+							<hpos>middle</hpos>
+							<vpos>high_center</vpos>
+							<buttons>
+								<button event="close" data="player_nextpage">Dismiss</button>
+							</buttons>
+						</popup>
+					</data>
+				</event>
+				<event id="release" actionevent="release" actionresult="" target="" data="" />
+			</eventlist>
+		</object>
+	</sheet>
+
+</page>

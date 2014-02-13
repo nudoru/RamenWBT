@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<page>
+	
+	<config>
+		<!-- name of the page -->
+		<name>Testing Page</name>
+		<!-- type of page -->
+		<type>testing</type>
+		<!-- size -->
+		<pagesize>750,360</pagesize>
+		<!-- left, top, right, bottom -->
+		<pageborders>10,10,10,10</pageborders>
+	</config>
+	
+	<!-- 
+		On stage object data, text fields, etc
+		the target attrib of a <text> tag corresponts to a text field named "value_txt"
+	 -->
+	<pagecontent>
+		<!-- title, body, bodyleft and bodyright are adjusted based on page size and page borders -->
+		<text target="title"><![CDATA[test]]></text>
+		<text target="body"><![CDATA[]]></text>
+		<text target="bodyleft"><![CDATA[]]></text>
+		<text target="bodyright"><![CDATA[]]></text>
+	</pagecontent>
+
+	<!-- Page Objects go here -->
+	<sheet>
+
+		<object type="audioplayer" id="audio1" guid="">
+			<position>150,250</position>
+			<size>250,30</size>
+			<playerswf>templates/po/poaudioplayer.swf</playerswf>
+			<url playmode="auto" playdelay="2">assets/test.mp3</url>
+			<!--
+			<eventlist>
+				<event id="start" actionevent="pb_start" actionresult="command" target="alp_al" data="audio_start" />
+				<event id="play" actionevent="pb_play" actionresult="command" target="alp_al" data="audio_play" />
+				<event id="pause" actionevent="pb_pause" actionresult="command" target="alp_al" data="audio_pause" />
+				<event id="stop" actionevent="pb_stop" actionresult="command" target="alp_al" data="audio_stop" />
+				<event id="finish" actionevent="pb_finish" actionresult="command" target="alp_al" data="audio_finished" />
+			</eventlist>
+			-->
+		</object>
+		
+	</sheet>
+
+</page>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<page>
+	
+	<config>
+		<!-- name of the page -->
+		<name>Testing Page</name>
+		<!-- type of page -->
+		<type>testing</type>
+		<!-- size -->
+		<pagesize></pagesize>
+		<!-- left, top, right, bottom -->
+		<pageborders>10,10,10,10</pageborders>
+	</config>
+	
+	<!-- 
+		On stage object data, text fields, etc
+		the target attrib of a <text> tag corresponts to a text field named "value_txt"
+	 -->
+	<pagecontent>
+		<!-- title, body, bodyleft and bodyright are adjusted based on page size and page borders -->
+		<text target="title"><![CDATA[Welcome to the Scientia Player]]></text>
+		<text target="body"><![CDATA[Scientia is a framework to quickly and easily create full Flash courses. You don’t need a Flash developer to create courses with Scientia – anyone familiar with XML or HTML can develop with it! Scientia is fully themable so that it can adapt the desired look and feel of the learning solution. It includes several common screen types to create eye catching interactions and provides an easy programming interface so that an advanced Flash developer can create new interactions quickly and easily. Scientia has a robust set of object types (images, text areas, buttons, etc.) and actions so that custom interactions may be created in XML alone – saving developers time.<br><br>Scientia communicates with any SCORM 1.2 or SCORM 2004 compliant LMS ensuring that training records are updated accurately and according to industry standards. Basic tracking information is recorded and advanced information, such as interaction data, is planned.<br><br>Authors of any skill level can quickly deliver a full course by using their favorite XML editor and image editing software. Courses can be authored using the included templates and features of the player so that you never need to open Flash or create a single line of code.<br><br>Advanced Flash developers can “get their hands dirty” and take advantage of the easy to use programming interfaces and create new course themes or interactions. There is no limit to the types of training you can create!]]></text>
+		<text target="bodyleft"><![CDATA[]]></text>
+		<text target="bodyright"><![CDATA[]]></text>
+	</pagecontent>
+
+	<!-- Page Objects go here -->
+	<sheet>
+		<!--<object type="text" id="text1" guid="">
+			<position>10,100</position>
+			<size>300,100</size>
+			<content><![CDATA[Click to set a page status]]></content>
+			<fontstyle size="18" color="0x006699" bold="false" italic="false" align="left" leading="1">Verdana</fontstyle>
+			<eventlist>
+				<event id="release" actionevent="release" actionresult="set_page_status" target="" data="passed" />
+			</eventlist>
+		</object>-->
+	</sheet>
+
+</page>

@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<page>
+	
+	<config>
+		<!-- name of the page -->
+		<name>Testing Page</name>
+		<!-- type of page -->
+		<type>testing</type>
+		<!-- size -->
+		<pagesize>777,510</pagesize>
+		<!-- left, top, right, bottom -->
+		<pageborders>10,10,10,10</pageborders>
+		<!-- background image for the page -->
+		<pagebgimage></pagebgimage>
+	</config>
+
+	<!-- 
+		On stage object data, text fields, etc
+		the target attrib of a <text> tag corresponts to a text field named "value_txt"
+	 -->
+	<pagecontent>
+		<!-- title, body, bodyleft and bodyright are adjusted based on page size and page borders -->
+		<text target="title"><![CDATA[Quizzing Template - Multiple Choice]]></text>
+		<text target="body"><![CDATA[Choose the best response(s) below. Click <b>Submit</b> when done.]]></text>
+		<text target="bodyleft"><![CDATA[]]></text>
+		<text target="bodyright"><![CDATA[]]></text>
+	</pagecontent>
+
+	<!-- Intearction data here -->
+	<interaction>
+		<question type="choice" subtype="multi_select" id="question1">
+			<instruction><![CDATA[Instructions for the question]]></instruction>
+			<settings>
+				<tries>2</tries>
+				<position></position>
+				<!-- for mc question, width is width of the choice items, height isn't used -->
+				<size></size>
+				<randomizechoices>false</randomizechoices>
+				<caaction>do_this</caaction>
+				<waaction>do_this_also</waaction>
+				<feedbacktype>popup</feedbacktype>
+				<showanswers>true</showanswers>
+				<resetonwa>true</resetonwa>
+			</settings>
+			<cafeedback><![CDATA[This is the correct feedback]]></cafeedback>
+			<wafeedback><![CDATA[Incorrect 1]]></wafeedback>
+			<wafeedback><![CDATA[Incorrect 2]]></wafeedback>
+			<wafeedback><![CDATA[Incorrect 3]]></wafeedback>
+			<choice correct="true" id="choice1">
+				<settings>
+					<position>50,50</position>
+					<size>50,50</size>
+					<matchposition>50,50</matchposition>
+					<matchsize>50,50</matchsize>
+				</settings>
+				<text><![CDATA[1 Maecenas vel turpis et tellus cursus hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae nisl et sem rhoncus vehicula. Ut tristique ullamcorper libero. Aenean faucibus. Nunc a ipsum. Vivamus elit sapien, consectetur nec, pharetra a, mattis sit amet, ipsum. Integer molestie leo.]]></text>
+				<match><![CDATA[this is the match text]]></match>
+				<cafeedback><![CDATA[choice 1 level ca feedback]]></cafeedback>
+				<wafeedback><![CDATA[choice 1 level Incorrect 1]]></wafeedback>
+				<wafeedback><![CDATA[choice 1 level Incorrect 2]]></wafeedback>
+				<wafeedback><![CDATA[choice 1 level Incorrect 3]]></wafeedback>
+			</choice>
+			<choice correct="false" id="choice2">
+				<settings>
+					<position>50,50</position>
+					<size>50,50</size>
+					<matchposition>50,50</matchposition>
+					<matchsize>50,50</matchsize>
+				</settings>
+				<text><![CDATA[this is choice 2]]></text>
+				<match><![CDATA[this is the match text]]></match>
+				<cafeedback><![CDATA[choice 2 level ca feedback]]></cafeedback>
+				<wafeedback><![CDATA[choice 2 level Incorrect 1]]></wafeedback>
+				<wafeedback><![CDATA[choice 2 level Incorrect 2]]></wafeedback>
+				<wafeedback><![CDATA[choice 2 level Incorrect 3]]></wafeedback>
+			</choice>
+			<choice correct="true" id="choice3">
+				<settings>
+					<position>50,50</position>
+					<size>50,50</size>
+					<matchposition>50,50</matchposition>
+					<matchsize>50,50</matchsize>
+				</settings>
+				<text><![CDATA[this is choice 3]]></text>
+				<match><![CDATA[this is the match text]]></match>
+				<cafeedback><![CDATA[choice 3 level ca feedback]]></cafeedback>
+				<wafeedback><![CDATA[choice 3 level Incorrect 1]]></wafeedback>
+				<wafeedback><![CDATA[choice 3 level Incorrect 2]]></wafeedback>
+				<wafeedback><![CDATA[choice 3 level Incorrect 3]]></wafeedback>
+			</choice>
+			<choice correct="false" id="choice4">
+				<settings>
+					<position>50,50</position>
+					<size>50,50</size>
+					<matchposition>50,50</matchposition>
+					<matchsize>50,50</matchsize>
+				</settings>
+				<text><![CDATA[this is choice 4]]></text>
+				<match><![CDATA[this is the match text]]></match>
+				<cafeedback><![CDATA[choice 4 level ca feedback]]></cafeedback>
+				<wafeedback><![CDATA[choice 4 level Incorrect 1]]></wafeedback>
+				<wafeedback><![CDATA[choice 4 level Incorrect 2]]></wafeedback>
+				<wafeedback><![CDATA[choice 4 level Incorrect 3]]></wafeedback>
+			</choice>
+		</question>
+	</interaction>
+
+</page>

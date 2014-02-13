@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<page>
+	
+	<config>
+		<!-- name of the page -->
+		<name>Testing Page</name>
+		<!-- type of page -->
+		<type>testing</type>
+		<!-- size -->
+		<pagesize>777,510</pagesize>
+		<!-- left, top, right, bottom -->
+		<pageborders>10,10,10,10</pageborders>
+		<!-- background image for the page -->
+		<pagebgimage></pagebgimage>
+		<!-- is this template running out side of the player? -->
+		<standalone>true</standalone>
+	</config>
+
+	<!-- 
+		On stage object data, text fields, etc
+		the target attrib of a <text> tag corresponts to a text field named "value_txt"
+	 -->
+	<pagecontent>
+		<!-- title, body, bodyleft and bodyright are adjusted based on page size and page borders -->
+		<text target="title"><![CDATA[Quizzing Template - Matching Dots]]></text>
+		<text target="body"><![CDATA[Drag the dots on the left to the correct match on the right. Click <b>Submit</b> when done.]]></text>
+		<text target="bodyleft"><![CDATA[]]></text>
+		<text target="bodyright"><![CDATA[]]></text>
+	</pagecontent>
+
+	<!-- Intearction data here -->
+	<interaction>
+		<question type="matching" subtype="matching" id="question2">
+			<instruction><![CDATA[Instructions for the question]]></instruction>
+			<settings>
+				<tries>2</tries>
+				
+				<!-- location and width and y spacing of the choice column -->
+				<!--<choiceposition>20,150</choiceposition>
+				<choicesize>200,5</choicesize>
+				<choicespacing>0,5</choicespacing>-->
+				<!-- location and width and y spacing of the match column -->
+				<!--<matchposition>400,150</matchposition>
+				<matchsize>300,10</matchsize>
+				<matchspacing>0,10</matchspacing>-->
+				
+				<autosizeparts>true</autosizeparts>
+				<randomizechoices>true</randomizechoices>
+				<randomizematches>true</randomizematches>
+				<feedbacktype>popup</feedbacktype>
+				<allowincorrectmatches>true</allowincorrectmatches>
+				<resetonwa>true</resetonwa>
+				<showanswers>true</showanswers>
+			</settings>
+			<cafeedback><![CDATA[This is the correct feedback]]></cafeedback>
+			<wafeedback><![CDATA[Incorrect 1]]></wafeedback>
+			<wafeedback><![CDATA[Incorrect 2]]></wafeedback>
+			<choice correct="true" id="choice1">
+				<label>a</label>
+				<text><![CDATA[Choice 1]]></text>
+				<match><![CDATA[Match 1]]></match>
+			</choice>
+			<choice correct="false" id="choice2">
+				<label>b</label>
+				<text><![CDATA[Choice 2]]></text>
+				<match><![CDATA[Match 2]]></match>
+			</choice>
+			<choice correct="true" id="choice3">
+				<label>c</label>
+				<text><![CDATA[Choice 3]]></text>
+				<match><![CDATA[Match 3]]></match>
+			</choice>
+			<choice correct="false" id="choice4">
+				<label>d</label>
+				<text><![CDATA[Choice 4]]></text>
+				<match><![CDATA[Match 4]]></match>
+			</choice>
+		</question>
+	</interaction>
+
+</page>

@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<page>
+	
+	<config>
+		<name>Testing Page</name>
+		<type>testing</type>
+		<pagesize>750,360</pagesize>
+		<!-- left, top, right, bottom -->
+		<pageborders>10,10,10,10</pageborders>
+	</config>
+
+	<pagecontent>
+		<!-- title, body, bodyleft and bodyright are adjusted based on page size and page borders -->
+		<text target="title"><![CDATA[getlatin:2,5]]></text>
+		<text target="body"><![CDATA[getlatin:100,200]]></text>
+		<text target="bodyleft"><![CDATA[getlatin:50,100]]></text>
+		<text target="bodyright"><![CDATA[getlatin:50,100]]></text>
+	</pagecontent>
+
+	<sheet>
+	<!--
+		<object type="text" id="text1" guid="">
+			<position>350,30</position>
+			<size>300,300</size>
+			<content><![CDATA[getlatin:300,400]]></content>
+			<transitionin effect="slide_from_left" delay="0" mode="play" />
+			<transitionout effect="slide_from_left" delay="0" mode="play" />
+			<scrolling>true</scrolling>
+			<fontstyle size="10" color="0xC03700" bold="false" italic="false" align="left" leading="1">Verdana</fontstyle>
+			<eventlist>
+				<event id="imageover" actionevent="rollover" actionresult="transitionin" target="graphic1" data="" />
+				<event id="imageout" actionevent="rollout" actionresult="transitionout" target="graphic1" data="" />
+				<event id="imageclick" actionevent="click" actionresult="dispatchcustomevent" target="sound" data="buzz" />
+			</eventlist>
+		</object>
+
+		<object type="graphic" id="graphic1" guid="">
+			<position>10,50</position>
+			<size>250,250</size>
+			<scale>100,100</scale>
+			<start mode="show" />
+			<transitionin effect="drop_from_top" delay="0" mode="play" />
+			<transitionout effect="fade_in" delay="0" mode="stop" />
+			<borderstyle></borderstyle>
+			<borderwidth>10</borderwidth>
+			<shadow>true</shadow>
+			<caption>This is a dynamically loaded image!</caption>
+			<url startframe="3" playmode="none">mframe.swf</url>
+			<eventlist>
+				<event id="imageclick" actionevent="click" actionresult="goto_pagename" target="Products Page" data="" />
+			</eventlist>
+		</object>
+
+		<object type="flvplayerbox" id="flv1" guid="">
+			<position>50,70</position>
+			<borderstyle>none</borderstyle>
+			<url>sample.flv</url>
+		</object>
+
+		<object type="gradrect" id="rect1" guid="">
+			<position>200,200</position>
+			<size>400,50</size>
+			<linecolor>0x000001</linecolor>
+			<lightcolor>0x666666</lightcolor>
+			<darkcolor>0x333333</darkcolor>
+			<shadow>false</shadow>
+			<reflection>true</reflection>
+			<eventlist>
+				<event id="imageover" actionevent="rollover" actionresult="transitionout" target="text1" data="" />
+				<event id="imageover" actionevent="rollout" actionresult="transitionin" target="text1" data="" />
+			</eventlist>
+		</object>
+
+		<object type="hotspot" id="rect1" guid="">
+			<position>200,200</position>
+			<size>400,50</size>
+			<debug>false</debug>
+			<eventlist>
+				<event id="imageover" actionevent="rollover" actionresult="transitionout" target="text1" data="" />
+				<event id="imageover" actionevent="rollout" actionresult="transitionin" target="text1" data="" />
+			</eventlist>
+		</object>
+	-->
+	</sheet>
+
+</page>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<page>
+	
+	<config>
+		<!-- name of the page -->
+		<name>Testing Page</name>
+		<!-- type of page -->
+		<type>testing</type>
+		<!-- size -->
+		<pagesize>777,510</pagesize>
+		<!-- left, top, right, bottom -->
+		<pageborders>10,10,10,10</pageborders>
+		<!-- background image for the page -->
+		<pagebgimage></pagebgimage>
+		<!-- is this template running out side of the player? -->
+		<standalone>true</standalone>
+	</config>
+
+	<!-- 
+		On stage object data, text fields, etc
+		the target attrib of a <text> tag corresponts to a text field named "value_txt"
+	 -->
+	<pagecontent>
+		<!-- title, body, bodyleft and bodyright are adjusted based on page size and page borders -->
+		<text target="title"><![CDATA[Quizzing Template - Text Entry Compare]]></text>
+		<text target="body"><![CDATA[Key your thoughts in the text field below. Click <b>Submit</b> when done to see how your thoughts compare to others.]]></text>
+		<text target="bodyleft"><![CDATA[]]></text>
+		<text target="bodyright"><![CDATA[]]></text>
+	</pagecontent>
+
+	<!-- Intearction data here -->
+	<interaction>
+		<question type="long-fill-in" subtype="" id="question1">
+			<instruction><![CDATA[Instructions for the question]]></instruction>
+			<settings>
+				<position>50,200</position>
+			</settings>
+			<feedbacklabel>Others are thinking ...</feedbacklabel>
+			<cafeedback><![CDATA[Fourty two!]]></cafeedback>
+			<choice correct="true" id="choice1">
+				<text><![CDATA[Key your text here.]]></text>
+				<label>What are you thinking?</label>
+			</choice>
+		</question>
+	</interaction>
+
+</page>

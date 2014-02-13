@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<page>
+	
+	<config>
+		<!-- name of the page -->
+		<name>Testing Page</name>
+		<!-- type of page -->
+		<type>testing</type>
+		<!-- size -->
+		<pagesize>777,510</pagesize>
+		<!-- left, top, right, bottom -->
+		<pageborders>10,10,10,10</pageborders>
+		<!-- background image for the page -->
+		<pagebgimage></pagebgimage>
+		<!-- is this template running out side of the player? -->
+		<standalone>true</standalone>
+	</config>
+
+	<!-- 
+		On stage object data, text fields, etc
+		the target attrib of a <text> tag corresponts to a text field named "value_txt"
+	 -->
+	<pagecontent>
+		<!-- title, body, bodyleft and bodyright are adjusted based on page size and page borders -->
+		<text target="title"><![CDATA[Dynamic, note cards (in development)]]></text>
+		<text target="body"><![CDATA[Click the forward and back buttons to navigate the stack]]></text>
+		<text target="bodyleft"><![CDATA[]]></text>
+		<text target="bodyright"><![CDATA[]]></text>
+	</pagecontent>
+
+	<!-- Intearction data here -->
+	<interaction>
+		<list id="list1">
+			<settings>
+				<!-- should be left to autolocate -->
+			</settings>
+			<item id="item1">
+				<title><![CDATA[Card 1]]></title>
+				<text><![CDATA[getlatin:200:500]]></text>
+			</item>
+			<item id="item2">
+				<title><![CDATA[Card 2]]></title>
+				<text><![CDATA[getlatin:200:500]]></text>
+			</item>
+			<item id="item3">
+				<title><![CDATA[Card 3]]></title>
+				<text><![CDATA[getlatin:200:500]]></text>
+			</item>
+		</list>
+	</interaction>
+
+</page>

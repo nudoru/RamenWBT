@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<page>
+	
+	<config>
+		<!-- name of the page -->
+		<name>Testing Page</name>
+		<!-- type of page -->
+		<type>testing</type>
+		<!-- size -->
+		<pagesize>777,510</pagesize>
+		<!-- left, top, right, bottom -->
+		<pageborders>10,10,10,10</pageborders>
+		<!-- background image for the page -->
+		<pagebgimage></pagebgimage>
+	</config>
+	
+	<!-- 
+		On stage object data, text fields, etc
+		the target attrib of a <text> tag corresponts to a text field named "value_txt"
+	 -->
+	<pagecontent>
+		<!-- title, body, bodyleft and bodyright are adjusted based on page size and page borders -->
+		<text target="title"><![CDATA[Tile Gallery]]></text>
+		<text target="body"><![CDATA[]]></text>
+		<text target="bodyleft"><![CDATA[]]></text>
+		<text target="bodyright"><![CDATA[]]></text>
+	</pagecontent>
+	
+	<interaction>
+		<list id="list1" type="">
+			<settings>
+				<!-- location and width and y spacing of the item column -->
+				<itemposition>300,200</itemposition>
+				<itemsize>100,100</itemsize>
+				<itemspacing>4</itemspacing>
+			</settings>
+			<item id="entry1" type="picture" width="250" height="250">
+				<title>getlatin:2,5</title>
+				<thumbnail>assets/testimage.jpg</thumbnail>
+				<mediaurl width="" height=""></mediaurl>
+				<text></text>
+			</item>
+			<item id="entry1" type="picture" width="250" height="250">
+				<title>getlatin:2,5</title>
+				<thumbnail>assets/testimage.jpg</thumbnail>
+				<mediaurl width="" height=""></mediaurl>
+				<text><![CDATA[getlatin:10,40]]></text>
+			</item>
+			<item id="entry1" type="picture" width="250" height="250">
+				<title>getlatin:2,5</title>
+				<thumbnail>assets/testimage.jpg</thumbnail>
+				<mediaurl width="" height=""></mediaurl>
+				<text><![CDATA[getlatin:10,40]]></text>
+			</item>
+			<item id="entry1" type="picture" width="250" height="250">
+				<title>getlatin:2,5</title>
+				<thumbnail>assets/testimage.jpg</thumbnail>
+				<mediaurl width="" height=""></mediaurl>
+				<text><![CDATA[getlatin:10,40]]></text>
+			</item>
+			<item id="entry1" type="picture" width="250" height="250">
+				<title>getlatin:2,5</title>
+				<thumbnail>assets/testimage.jpg</thumbnail>
+				<mediaurl width="" height=""></mediaurl>
+				<text><![CDATA[getlatin:10,40]]></text>
+			</item>
+			<item id="entry1" type="picture" width="250" height="250">
+				<title>getlatin:2,5</title>
+				<thumbnail>assets/testimage.jpg</thumbnail>
+				<mediaurl width="" height=""></mediaurl>
+				<text><![CDATA[getlatin:10,40]]></text>
+			</item>
+			<item id="entry1" type="picture" width="250" height="250">
+				<title>getlatin:2,5</title>
+				<thumbnail>assets/testimage.jpg</thumbnail>
+				<mediaurl width="" height=""></mediaurl>
+				<text><![CDATA[getlatin:10,40]]></text>
+			</item>
+			<item id="entry1" type="picture" width="250" height="250">
+				<title>getlatin:2,5</title>
+				<thumbnail>assets/testimage.jpg</thumbnail>
+				<mediaurl width="" height=""></mediaurl>
+				<text><![CDATA[getlatin:10,40]]></text>
+			</item>
+		</list>
+	</interaction>
+
+	
+
+</page>

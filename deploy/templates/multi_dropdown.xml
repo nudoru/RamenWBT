@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<page>
+	
+	<config>
+		<!-- name of the page -->
+		<name>Testing Page</name>
+		<!-- type of page -->
+		<type>testing</type>
+		<!-- size -->
+		<pagesize>777,510</pagesize>
+		<!-- left, top, right, bottom -->
+		<pageborders>10,10,10,10</pageborders>
+		<!-- background image for the page -->
+		<pagebgimage></pagebgimage>
+		<!-- is this template running out side of the player? -->
+		<standalone>true</standalone>
+	</config>
+
+	<!-- 
+		On stage object data, text fields, etc
+		the target attrib of a <text> tag corresponts to a text field named "value_txt"
+	 -->
+	<pagecontent>
+		<!-- title, body, bodyleft and bodyright are adjusted based on page size and page borders -->
+		<text target="title"><![CDATA[Quizzing Template - Multiple Dropdown Select]]></text>
+		<text target="body"><![CDATA[Rate each of the statements below. Click <b>Submit</b> when done.]]></text>
+		<text target="bodyleft"><![CDATA[]]></text>
+		<text target="bodyright"><![CDATA[]]></text>
+	</pagecontent>
+
+	<!-- Intearction data here -->
+	<interaction>
+		<question type="selection" subtype="" id="question1">
+			<instruction><![CDATA[Instructions for the question]]></instruction>
+			<settings>
+				<tries>2</tries>
+				<caaction>do_this</caaction>
+				<waaction>do_this_also</waaction>
+				<feedbacktype>popup</feedbacktype>
+				<showanswers>true</showanswers>
+				<resetonwa>true</resetonwa>
+				<randomizechoices>true</randomizechoices>
+			</settings>
+			<cafeedback><![CDATA[This is the correct feedback]]></cafeedback>
+			<wafeedback><![CDATA[Incorrect 1]]></wafeedback>
+			<wafeedback><![CDATA[Incorrect 2]]></wafeedback>
+			<wafeedback><![CDATA[Incorrect 3]]></wafeedback>
+			<matchcolumnlabel>Slider</matchcolumnlabel>
+			<choicecolumnlabel>Statement</choicecolumnlabel>
+			<selection>
+				<!-- interaction will not work unless the first one is blank - this is the default nothing selected state -->
+				<choice data=" " default="true"> </choice>
+				<choice data="one">One</choice>
+				<choice data="two">Two</choice>
+				<choice data="three">Three</choice>
+				<choice data="four">Four</choice>
+				<choice data="five">Five</choice>
+				<choice data="six">Six</choice>
+			</selection>
+			<choice id="choice1">
+				<text><![CDATA[This is the first thing.]]></text>
+				<match>one</match>
+			</choice>
+			<choice id="choice2">
+				<text><![CDATA[This one should come before the third one. This one should come before the third one. This one should come before the third one. This one should come before the third one. This one should come before the third one. ]]></text>
+				<match>two</match>
+			</choice>
+			<choice id="choice3">
+				<text><![CDATA[There are _____ lights.]]></text>
+				<match>three</match>
+			</choice>
+			<choice id="choice4">
+				<text><![CDATA[What's 2^2?]]></text>
+				<match>four</match>
+			</choice>
+			<choice id="choice5">
+				<text><![CDATA[How many fingers do you have?]]></text>
+				<match>five</match>
+			</choice>
+			<choice id="choice6">
+				<text><![CDATA[This comes after five.]]></text>
+				<match>six</match>
+			</choice>
+		</question>
+	</interaction>
+
+	<sheet>
+		<object type="textbox" id="text1" guid="">
+			<position>400,20</position>
+			<size>70</size>
+			<content><![CDATA[Example]]></content>
+			<radius>5</radius>
+			<linecolor>0x333333</linecolor>
+			<lightcolor>0eeeeee</lightcolor>
+			<darkcolor>0xcccccc</darkcolor>
+			<borderwidth>2</borderwidth>
+			<shadow>true</shadow>
+			<fontstyle size="12" color="0x000001" bold="false" italic="false" align="center" leading="1">Verdana</fontstyle>
+			<eventlist>
+				<event id="click" actionevent="click" actionresult="show_popup" target="" data="">
+					<data>
+						<popup id="testpopup2" draggable="true">
+							<type modal="false" persistant="false">simple</type>
+							<title></title>
+							<content><![CDATA[For this review, Wacom provided me with the medium version of the Intuos4. Think of this midsized, midpriced pen tablet as the Goldilocks model—not too large, not too expensive. The active area of the 10-by-14.6-inch (HW) pad, at 5.5 by 8.8 inches, is not as high but a bit wider than the 6-by-8-inch active area of the Intuos3 6x8. With the Intuos4, the company has switched from the active-area designations associated with its now-discontinued predecessor to the generic small, medium, large, and extra large.]]></content>
+							<hpos>middle</hpos>
+							<vpos>high_center</vpos>
+							<buttons>
+								<button event="close" data="player_nextpage">Dismiss</button>
+							</buttons>
+						</popup>
+					</data>
+				</event>
+				<event id="release" actionevent="release" actionresult="" target="" data="" />
+			</eventlist>
+		</object>
+	</sheet>
+	
+</page>

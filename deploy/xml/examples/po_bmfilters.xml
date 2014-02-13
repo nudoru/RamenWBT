@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<page>
+	
+	<config>
+		<!-- name of the page -->
+		<name>Testing Page</name>
+		<!-- type of page -->
+		<type>testing</type>
+		<!-- size -->
+		<pagesize>750,360</pagesize>
+		<!-- left, top, right, bottom -->
+		<pageborders>10,10,10,10</pageborders>
+	</config>
+	
+	<!-- 
+		On stage object data, text fields, etc
+		the target attrib of a <text> tag corresponts to a text field named "value_txt"
+	 -->
+	<pagecontent>
+		<!-- title, body, bodyleft and bodyright are adjusted based on page size and page borders -->
+		<text target="title"><![CDATA[Graphic Page Object]]></text>
+		<text target="body"><![CDATA[]]></text>
+		<text target="bodyleft"><![CDATA[]]></text>
+		<text target="bodyright"><![CDATA[Show any supported graphic file format. For SWFs, you can set it to start on a specific frame or to automatically play when loaded. Via events, you may tell it to goto a specific frame (gotoandstop) or play at a specific frame (gotoandplay).<br><br>Border is optional. Caption is supported.]]></text>
+	</pagecontent>
+
+	<!-- Page Objects go here -->
+	<sheet>
+		
+		<object type="text" id="text1" guid="">
+			<position>10,50</position>
+			<size>300,100</size>
+			<content><![CDATA[getlatin:2,5]]></content>
+			<scrolling>false</scrolling>
+			<fontstyle size="24" color="0x006699" bold="false" italic="false" align="left" leading="1">Verdana</fontstyle>
+			<bmfilter type="shadow">
+				<color>0x000000</color>
+				<angle>45</angle>
+				<distance>5</distance>
+				<alpha>.5</alpha>
+				<blur>5</blur>
+				<strength>1</strength>
+			</bmfilter>
+		</object>
+		
+		<object type="graphic" id="graphic1" guid="">
+			<position>400,65</position>
+			<size>250,250</size>
+			<url startframe="3" playmode="none">assets/testimage.jpg</url>
+			<bmfilter type="glow">
+				<color>0x00ff00</color>
+				<alpha>1</alpha>
+				<blur>15</blur>
+				<strength>2</strength>
+			</bmfilter>
+			<bmfilter type="shadow">
+				<color>0x000000</color>
+				<angle>45</angle>
+				<distance>2</distance>
+				<alpha>.3</alpha>
+				<blur>10</blur>
+				<strength>10</strength>
+			</bmfilter>
+		</object>
+	</sheet>
+
+</page>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<page>
+	
+	<config>
+		<!-- name of the page -->
+		<name>Testing Page</name>
+		<!-- type of page -->
+		<type>testing</type>
+		<!-- size -->
+		<pagesize>750,360</pagesize>
+		<!-- left, top, right, bottom -->
+		<pageborders>10,10,10,10</pageborders>
+	</config>
+	
+	<!-- 
+		On stage object data, text fields, etc
+		the target attrib of a <text> tag corresponts to a text field named "value_txt"
+	 -->
+	<pagecontent>
+		<!-- title, body, bodyleft and bodyright are adjusted based on page size and page borders -->
+		<text target="title"><![CDATA[Page object events overview]]></text>
+		<text target="body"><![CDATA[]]></text>
+		<text target="bodyleft"><![CDATA[]]></text>
+		<text target="bodyright"><![CDATA[Page objects may be assigned events that are navigational (go to a web site, open a document, go to another page in the site) or functional (effect another page object). These events are fired when the user interacts with the objects by: rolling over, rolling out, clicking, releasing the mouse button. Multiple events may be assigned for each user interaction.]]></text>
+	</pagecontent>
+
+	<!-- Page Objects go here -->
+	<sheet>
+		<object type="text" id="text1" guid="">
+			<position>10,150</position>
+			<size>300,100</size>
+			<reflection>true</reflection>
+			<content><![CDATA[Interact with me]]></content>
+			<fontstyle size="24" color="0x006699" bold="false" italic="false" align="left" leading="1">Verdana</fontstyle>
+			<eventlist>
+				<event id="over" actionevent="rollover" actionresult="" target="" data="" />
+				<event id="out" actionevent="rollout" actionresult="" target="" data="" />
+				<event id="click" actionevent="click" actionresult="" target="" data="" />
+				<event id="release" actionevent="release" actionresult="" target="" data="" />
+			</eventlist>
+		</object>
+	</sheet>
+
+</page>

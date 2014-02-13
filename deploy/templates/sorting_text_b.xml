@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<page>
+	
+	<config>
+		<!-- name of the page -->
+		<name>Testing Page</name>
+		<!-- type of page -->
+		<type>testing</type>
+		<!-- size -->
+		<pagesize>777,510</pagesize>
+		<!-- left, top, right, bottom -->
+		<pageborders>10,10,10,10</pageborders>
+		<!-- background image for the page -->
+		<pagebgimage></pagebgimage>
+		<!-- is this template running out side of the player? -->
+		<standalone>true</standalone>
+	</config>
+
+	<!-- 
+		On stage object data, text fields, etc
+		the target attrib of a <text> tag corresponts to a text field named "value_txt"
+	 -->
+	<pagecontent>
+		<!-- title, body, bodyleft and bodyright are adjusted based on page size and page borders -->
+		<text target="title"><![CDATA[Sorting Text Tile Question 1 of 1]]></text>
+		<text target="body"><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet, tellus quis interdum dapibus]]></text>
+		<text target="bodyleft"><![CDATA[]]></text>
+		<text target="bodyright"><![CDATA[]]></text>
+	</pagecontent>
+
+	<!-- Intearction data here -->
+	<interaction>
+		<question type="matching" subtype="sorting" id="question2">
+			<prompt><![CDATA[Question Prompt]]></prompt>
+			<instruction><![CDATA[Instructions for the question]]></instruction>
+			<settings>
+				<tries>2</tries>
+				<feedbacktype>popup</feedbacktype>
+				<randomizechoices>true</randomizechoices>
+				<allowincorrectmatches>true</allowincorrectmatches>
+				<resetonwa retainca="true">true</resetonwa>
+				<showanswers>true</showanswers>
+			</settings>
+			<cafeedback><![CDATA[This is the correct feedback]]></cafeedback>
+			<wafeedback><![CDATA[Incorrect 1]]></wafeedback>
+			<wafeedback><![CDATA[Incorrect 2]]></wafeedback>
+			<match id="match1"><![CDATA[Even Numbers]]></match>
+			<match id="match2"><![CDATA[Odd Numbers]]></match>
+			<choice correct="true" id="choice1">
+				<text><![CDATA[One]]></text>
+				<match>match2</match>
+			</choice>
+			<choice correct="false" id="choice2">
+				<text><![CDATA[Two]]></text>
+				<match>match1</match>
+			</choice>
+			<choice correct="true" id="choice3">
+				<text><![CDATA[Three]]></text>
+				<match>match2</match>
+			</choice>
+			<choice correct="false" id="choice4">
+				<text><![CDATA[Four]]></text>
+				<match>match1</match>
+			</choice>
+		</question>
+	</interaction>
+
+</page>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<page>
+	
+	<config>
+		<!-- name of the page -->
+		<name>Testing Page</name>
+		<!-- type of page -->
+		<type>testing</type>
+		<!-- size -->
+		<pagesize>750,360</pagesize>
+		<!-- left, top, right, bottom -->
+		<pageborders>10,10,10,10</pageborders>
+	</config>
+	
+	<!-- 
+		On stage object data, text fields, etc
+		the target attrib of a <text> tag corresponts to a text field named "value_txt"
+	 -->
+	<pagecontent>
+		<!-- title, body, bodyleft and bodyright are adjusted based on page size and page borders -->
+		<text target="title"><![CDATA[Welcome to ramen Player - DEVELOPMENT]]></text>
+		<text target="body"><![CDATA[ramen Player represents my 5th generation dynamic Flash/XML framework. It’s a highly customizable XML driven web site frame work that allows for the rapid development of a fullscreen Flash web site.<br><br>It focuses on small file sizes, UI cusomtization and site structure customization. My old monolithic page template/framework approach has been replaced by an exerternal SWF model. It also has a “page object” system that allows image, text fields, shape primiatives, audio players, and a few others things, to be added to any page. These objects may have animations (using CS3 animation XML), transitions, and trigger events that affect other objects. So a unique interactive page may be created entirely in XML without any timeline animation or scripting in the Flash environment. Kind of like my own simple MXML.]]></text>
+		<text target="bodyleft"><![CDATA[]]></text>
+		<text target="bodyright"><![CDATA[]]></text>
+	</pagecontent>
+
+	<!-- Page Objects go here -->
+	<sheet>
+	</sheet>
+
+</page>

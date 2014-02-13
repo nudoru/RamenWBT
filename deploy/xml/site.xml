@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<site>
+
+	<!-- Define metadata for the site -->
+	<meta>
+		<title>Player Development</title>
+		<id>TEST0000</id>
+		<version>1</version>
+		<lastupdate>09.02.21</lastupdate>
+		<author>Matt Perkins</author>
+		<notes></notes>
+	</meta>
+	
+	<!--configuration data -->
+	<config>
+		<!-- use a local shared object for storing state information, suspend data 
+		if using an LMS, this will only be used if there is no connection available
+		-->
+		<uselso>false</uselso>
+		<!-- use keyboard navigation and controls in the player -->
+		<useplayerkeycommands>true</useplayerkeycommands>
+		<!-- use the accessibilty manager for tab indexes and other disability features. if false, Flash's default tabindexing will be used -->
+		<useaccessibility>true</useaccessibility>
+		<!-- show a pop up on player warning - useful for debugging during development -->
+		<showwarnings>true</showwarnings>
+		<!-- enabled cheat mode -->
+		<cheatkeyenabled>true</cheatkeyenabled>
+		<!-- sound effects enabled? true or false -->
+		<sfxenabled>false</sfxenabled>
+		<!-- background audio enabled? true or false -->
+		<sbgenabled>false</sbgenabled>
+		<!-- use SWFAddress for deeplinking? should turn off for use on an LMS -->
+		<swfaddressenabled>true</swfaddressenabled>
+		<!-- theme settings file -->
+		<themefile>resources/bacbss/theme.xml</themefile>
+	</config>
+	
+	<lms>
+		<!--
+			none - LMS disabled
+			scorm
+				*scorm2004
+		-->
+		<mode>none</mode>
+		<!-- DEBUGGING TESTING FEATURE!!! -->
+		<simulatelms>false</simulatelms>
+		<!--
+			entrance
+			view_last_page
+			view_all_pages
+				*manual - completion set by a POEvent on a page
+				*mastery_score
+				*mastery_score&view_all_pages
+		-->
+		<completioncriteria>view_all_pages</completioncriteria>
+		<!-- record failing status or keep as incomplete -->
+		<recordfailing>false</recordfailing>
+		<!-- scoring features not yet implimented -->
+		<masteryscore>80</masteryscore>
+		
+		<!-- allow you to reanswer completed scored pages -->
+		<allowscoredreanswer>true</allowscoredreanswer>
+		<!-- reset scored pages on reentry of a module or resume from suspend/lms -->
+		<resetscoredpages>true</resetscoredpages>
+		
+		<!-- force the navigation options to only allow jumping to completed lessons 
+		page to page is affected
+		-->
+		<forcelinearnav>false</forcelinearnav>
+		
+		<!-- disables the next button on any scored page until it's marked complete -->
+		<intr_forceanswer>false</intr_forceanswer>
+		<!-- number of required attempts on scored interactions -->
+		<intr_numtries>1</intr_numtries>
+		<!-- forec correct answer -->
+		<intr_forceca>false</intr_forceca>
+		<!-- use interaction objects for internal session tracking, not saved to the LMS -->
+		<intr_useiobjects>true</intr_useiobjects>
+		
+		<!-- exit prompt to display if the module isn't completed yet -->
+		<exitpromptnoncomplete><![CDATA[Are your sure you want to exit?<br><br>Your progress will be saved and you may return to the module anytime.<br><br>]]></exitpromptnoncomplete>
+		<!-- exit prompt to display if the module is completed -->
+		<exitpromptcomplete><![CDATA[Are your sure you want to exit?<br><br>Your completion will be saved.<br><br>]]></exitpromptcomplete>
+	</lms>
+
+	<!-- 
+	define the site structure 
+		names and ID's MUST BE UNIQUE! navigation and tracking will not work correctly if there are identical names
+		nodes are major groups - must contain pages. cannot nest a node inside of another. think of these as main menu items
+		toc = true/flase, these nodes should not show on any menu structure
+		scored = true/flase, these notes will be treated special
+	-->
+	<structure>
+		<module id="root" name="root">
+			<section id="chapter1" name="Introduction">
+				<page id="intro" toc="true" name="Introduction" scored="false" swf="templates/generictemplate.swf" xml="xml/intro.xml" mandatory="true" />
+				
+				<page id="smartobj" toc="true" name="TEST Smart Objects" scored="false" swf="templates/generictemplate.swf" xml="xml/smartobjects.xml" mandatory="false" />
+			</section>
+			
+			<section id="chapter2" name="Dynamic">
+				<page id="listsvertlist" toc="true" name="Vetical List" swf="templates/list_vertlist.swf" xml="xml/list_vertlist.xml" />
+				<page id="listsimagelist" toc="true" name="Image List" swf="templates/list_imagelist.swf" xml="xml/list_imagelist.xml" />
+				<page id="listsimimgreveal" toc="true" name="Simple list reveal with images" swf="templates/list_simpreveal_image.swf" xml="xml/list_simpreveal_image.xml" />
+				<page id="listsnotecard" toc="true" name="Note cards" swf="templates/list_notecards.swf" xml="xml/list_notecards.xml"  mandatory="false"/>
+				<page id="liststermcard" toc="true" name="Term cards" swf="templates/list_termcards.swf" xml="xml/list_termcards.xml"  mandatory="false"/>
+				<page id="liststermcard3d" toc="true" name="Term cards 3D" swf="templates/list_termcards3d.swf" xml="xml/list_termcards3d.xml"  mandatory="false"/>
+				<page id="listsstackcard3d" toc="true" name="Stack cards 3D" swf="templates/list_stackcards3d.swf" xml="xml/list_stackcards3d.xml"  mandatory="false"/>
+				<page id="imagepathselect" toc="true" name="Image Path Selector" swf="templates/imagepathselector.swf" xml="xml/imagepathselector.xml"  mandatory="false"/>
+			</section>
+			
+			<section id="chapter3" name="Quizzing">
+				<page id="mcq1" toc="true" name="MC Question Binary" scored="true" swf="templates/mc_question.swf" xml="xml/mc_question_binary.xml" />
+				<page id="mcq2" toc="true" name="MC Question Single" scored="true" swf="templates/mc_question.swf" xml="xml/mc_question_ss.xml" />
+				<page id="mcq3" toc="true" name="MC Question Multiple" scored="true" swf="templates/mc_question.swf" xml="xml/mc_question_ms.xml" />
+				<page id="mcqimage" toc="true" name="MC Question Image" scored="true" swf="templates/mc_question_image.swf" xml="xml/mc_question_image.xml" />
+				<page id="textentrycomparet1" toc="true" name="Text Entry Compare" scored="false" swf="templates/text_entry_compare.swf" xml="xml/text_entry_compare.xml" />
+				<page id="matching1" toc="true" name="Matching Question" scored="true" swf="templates/matching_text.swf" xml="xml/matching_text.xml" />
+				<page id="matching1b" toc="true" name="Matching Question 2" scored="true" swf="templates/matching_text_b.swf" xml="xml/matching_text_b.xml" />
+				<page id="sorting1" toc="true" name="Sorting Question" scored="true" swf="templates/sorting_text.swf" xml="xml/sorting_text.xml" />
+				<page id="sorting1b" toc="true" name="Sorting Question 2" scored="true" swf="templates/sorting_text_b.swf" xml="xml/sorting_text_b.xml" />
+				<page id="ordering1" toc="true" name="Ordering Question" scored="true" swf="templates/ordering_text.swf" xml="xml/ordering_text.xml" />
+				<page id="matchingdot1" toc="true" name="Matching Dot" scored="true" swf="templates/matching_dot.swf" xml="xml/matching_dot.xml" />
+				<page id="1columns" toc="true" name="One Column (with scenario)" scored="true" swf="templates/mc_column.swf" xml="xml/mc_column.xml" />
+				<page id="2columns" toc="true" name="Two Column" scored="true" swf="templates/binary_columns.swf" xml="xml/binary_columns.xml" />
+				<page id="matchingspots" toc="true" name="Matching Hotspots" scored="true" swf="templates/matching_spots.swf" xml="xml/matching_spots.xml" />
+				
+				<page id="multidropdown" toc="true" name="Multi Dropdown" scored="true" swf="templates/multi_dropdown.swf" xml="xml/multi_dropdown.xml" />
+				<page id="multilikert" toc="true" name="Multi Likert" scored="true" swf="templates/multi_likert.swf" xml="xml/multi_likert.xml" />
+			</section>
+			
+			<section id="chapter4" name="Page Objects">
+				<page id="intro_pos" toc="true" name="Introduction" scored="false" swf="templates/generictemplate.swf" xml="xml/intro_pos.xml" />
+				<page id="csstest" toc="true" name="CSS Testing" scored="false" swf="templates/generictemplate.swf" xml="xml/examples/css_test.xml" />
+				<page id="pographic" name="Graphic" swf="templates/generictemplate.swf" xml="xml/examples/po_graphic.xml" />
+				<page id="potext" name="Text" swf="templates/generictemplate.swf" xml="xml/examples/po_text.xml" />
+				<page id="pographicdistort" name="Graphic Distortion" swf="templates/generictemplate.swf" xml="xml/examples/po_graphicdistort.xml" />
+				<page id="pogradrect" name="Grad Rect" swf="templates/generictemplate.swf" xml="xml/examples/po_gradrect.xml" />
+				<page id="pohotspot" name="Hotspot" swf="templates/generictemplate.swf" xml="xml/examples/po_hotspot.xml" />
+				<page id="pobutton" name="Button" swf="templates/generictemplate.swf" xml="xml/examples/po_button.xml" />
+				<page id="pobuttonpop" name="Button trigger Popup" swf="templates/generictemplate.swf" xml="xml/examples/po_btn_popup_box.xml" />
+				<page id="pogroup" name="Group" swf="templates/generictemplate.swf" xml="xml/examples/po_group.xml" />
+				<page id="pobmfilters" name="BM Filters" swf="templates/generictemplate.swf" xml="xml/examples/po_bmfilters.xml" />
+			</section>
+
+			<section id="chapter5" name="Page Objects Actions">
+				<page id="intro_po_acts" toc="true" name="Introduction" scored="false" swf="templates/generictemplate.swf" xml="xml/intro_po_actns.xml" />
+				<page id="poeoverview" name="Overview" swf="templates/generictemplate.swf" xml="xml/examples/po_events_overview.xml" />
+				<page id="poenavigation" name="Navigation" swf="templates/generictemplate.swf" xml="xml/examples/po_events_navigational.xml" />
+				<page id="poetransition" name="Transition" swf="templates/generictemplate.swf" xml="xml/examples/po_events_transitional.xml" />
+				<page id="poeforswfs" name="For SWFs" swf="templates/generictemplate.swf" xml="xml/examples/po_events_forswfs.xml" />
+				<page id="poetimer" name="Timer" swf="templates/generictemplate.swf" xml="xml/examples/po_events_timer.xml" />
+				<page id="intro_end" toc="true" name="Introduction" scored="false" swf="templates/generictemplate.swf" xml="xml/intro_end.xml" />
+			</section>
+			
+		</module>
+	</structure>
+</site>

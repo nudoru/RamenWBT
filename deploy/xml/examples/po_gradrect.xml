@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<page>
+	
+	<config>
+		<!-- name of the page -->
+		<name>Testing Page</name>
+		<!-- type of page -->
+		<type>testing</type>
+		<!-- size -->
+		<pagesize>750,360</pagesize>
+		<!-- left, top, right, bottom -->
+		<pageborders>10,10,10,10</pageborders>
+	</config>
+	
+	<!-- 
+		On stage object data, text fields, etc
+		the target attrib of a <text> tag corresponts to a text field named "value_txt"
+	 -->
+	<pagecontent>
+		<!-- title, body, bodyleft and bodyright are adjusted based on page size and page borders -->
+		<text target="title"><![CDATA[Gradient Rectangle/Rounded Page Object]]></text>
+		<text target="body"><![CDATA[]]></text>
+		<text target="bodyleft"><![CDATA[]]></text>
+		<text target="bodyright"><![CDATA[Gradient rectagle and Rounded Grad Rect. I like this type of shading. Also the shape used for graphic borders. Reflection is a prop of any page object.]]></text>
+	</pagecontent>
+
+	<!-- Page Objects go here -->
+	<sheet>
+		<object type="gradrect" id="rect1" guid="">
+			<position>10,50</position>
+			<size>300,100</size>
+			<linecolor>0xff0000</linecolor>
+			<lightcolor>0x00ff00</lightcolor>
+			<darkcolor>0x0000ff</darkcolor>
+			<shadow>false</shadow>
+			<reflection>true</reflection>
+		</object>
+		<object type="gradroundrect" id="rect2" guid="">
+			<position>10,210</position>
+			<size>300,100</size>
+			<radius>20</radius>
+			<linecolor>0xff0000</linecolor>
+			<lightcolor>0x00ff00</lightcolor>
+			<darkcolor>0x0000ff</darkcolor>
+			<shadow>false</shadow>
+			<reflection>true</reflection>
+		</object>
+		
+	</sheet>
+
+</page>

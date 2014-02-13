@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<page>
+	
+	<config>
+		<!-- name of the page -->
+		<name>Testing Page</name>
+		<!-- type of page -->
+		<type>testing</type>
+		<!-- size -->
+		<pagesize>750,360</pagesize>
+		<!-- left, top, right, bottom -->
+		<pageborders>10,10,10,10</pageborders>
+	</config>
+	
+	<!-- 
+		On stage object data, text fields, etc
+		the target attrib of a <text> tag corresponts to a text field named "value_txt"
+	 -->
+	<pagecontent>
+		<!-- title, body, bodyleft and bodyright are adjusted based on page size and page borders -->
+		<text target="title"><![CDATA[Timer Based Events]]></text>
+		<text target="body"><![CDATA[Events may be triggered by a timer. The timer fires every .25 seconds, so events must be timed to a multiple of that frequency.]]></text>
+		<text target="bodyleft"><![CDATA[]]></text>
+		<text target="bodyright"><![CDATA[]]></text>
+	</pagecontent>
+
+	<!-- Page Objects go here -->
+	<sheet>
+
+		<object type="eventmanager" id="em1" guid="">
+			<eventlist>
+				<!--<event id="timertesta" actionevent="timer" time="1" actionresult="transitionin" target="shape1" data="" />
+				<event id="timertestb" actionevent="timer" time="5" actionresult="transitionout" target="shape1" data="" />
+				<event id="timertestc" actionevent="timer" time="1.25" actionresult="transitionin" target="shape2" data="" />
+				<event id="timertestd" actionevent="timer" time="5.25" actionresult="transitionout" target="shape2" data="" />
+				<event id="timerteste" actionevent="timer" time="1.5" actionresult="transitionin" target="shape3" data="" />
+				<event id="timertestf" actionevent="timer" time="5.5" actionresult="transitionout" target="shape3" data="" />-->
+				<event id="timertestf" actionevent="timer" time="7" actionresult="restarttimer" target="" data="" />
+			</eventlist>
+		</object>
+		
+		<object type="shape" id="shape1" guid="">
+			<position>100,150</position>
+			<size>100,100</size>
+			<shape>ellipse</shape>
+			<radius>50</radius>
+			<linecolor>0xff0000</linecolor>
+			<linealpha>1</linealpha>
+			<linethickness>5</linethickness>
+			<fillcolor>0x0000ff</fillcolor>
+			<fillalpha>1</fillalpha>
+			<transitionin effect="drop_from_top" delay="0" mode="stop" />
+			<transitionout effect="fall_off" delay="0" mode="stop" />
+			<eventlist>
+				<event id="timertesta" actionevent="timer" time="1" actionresult="transitionin" target="shape1" data="" />
+				<event id="timertestb" actionevent="timer" time="5" actionresult="transitionout" target="shape1" data="" />
+			</eventlist>
+		</object>
+		<object type="shape" id="shape2" guid="">
+			<position>300,150</position>
+			<size>100,100</size>
+			<shape>roundrect</shape>
+			<radius>50</radius>
+			<linecolor>0xff0000</linecolor>
+			<linealpha>1</linealpha>
+			<linethickness>5</linethickness>
+			<fillcolor>0x0000ff</fillcolor>
+			<fillalpha>1</fillalpha>
+			<transitionin effect="drop_from_top" delay="0" mode="stop" />
+			<transitionout effect="fall_off" delay="0" mode="stop" />
+			<eventlist>
+				<event id="timertesta" actionevent="timer" time="1.25" actionresult="transitionin" target="shape2" data="" />
+				<event id="timertestb" actionevent="timer" time="5.25" actionresult="transitionout" target="shape2" data="" />
+			</eventlist>
+		</object>
+		<object type="shape" id="shape3" guid="">
+			<position>500,150</position>
+			<size>100,100</size>
+			<shape>rect</shape>
+			<radius>50</radius>
+			<linecolor>0xff0000</linecolor>
+			<linealpha>1</linealpha>
+			<linethickness>5</linethickness>
+			<fillcolor>0x0000ff</fillcolor>
+			<fillalpha>1</fillalpha>
+			<transitionin effect="drop_from_top" delay="0" mode="stop" />
+			<transitionout effect="fall_off" delay="0" mode="stop" />
+			<eventlist>
+				<event id="timertesta" actionevent="timer" time="1.5" actionresult="transitionin" target="shape3" data="" />
+				<event id="timertestb" actionevent="timer" time="5.5" actionresult="transitionout" target="shape3" data="" />
+			</eventlist>
+		</object>
+	</sheet>
+
+</page>

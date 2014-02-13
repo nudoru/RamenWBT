@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<page>
+	
+	<config>
+		<!-- name of the page -->
+		<name>Testing Page</name>
+		<!-- type of page -->
+		<type>testing</type>
+		<!-- size -->
+		<pagesize></pagesize>
+		<!-- left, top, right, bottom -->
+		<pageborders>10,10,10,10</pageborders>
+	</config>
+	
+	<!-- 
+		On stage object data, text fields, etc
+		the target attrib of a <text> tag corresponts to a text field named "value_txt"
+	 -->
+	<pagecontent>
+		<!-- title, body, bodyleft and bodyright are adjusted based on page size and page borders -->
+		<text target="title"><![CDATA[CSS Testing]]></text>
+		<text target="body"><![CDATA[]]></text>
+		<text target="bodyleft"><![CDATA[]]></text>
+		<text target="bodyright"><![CDATA[<span class="big">Hello </span>World...<br><br><a href="#">Click me</a>]]></text>
+	</pagecontent>
+
+	<!-- Page Objects go here -->
+	<sheet>
+		<object type="text" id="text2" guid="">
+			<position>10,60</position>
+			<size>300,170</size>
+			<content><![CDATA[<body><p><span class='expanded'>Hello </span>World...</p><p><a href="#">Click me</a></p></body>]]></content>
+			<fontstyle size="10" color="0x000001" bold="false" italic="false" align="left" leading="1">Verdana</fontstyle>
+		</object>
+		
+		<object type="textbox" id="text3" guid="">
+			<position>10,250</position>
+			<size>200,100</size>
+			<content><![CDATA[<body><p><span class='expanded'>Hello </span>World...</p><p><a href="#">Click me</a></p></body>]]></content>
+			<radius>20</radius>
+			<linecolor>0x999999</linecolor>
+			<lightcolor>0eeeeee</lightcolor>
+			<darkcolor>0xcccccc</darkcolor>
+			<borderwidth>5</borderwidth>
+			<fontstyle size="10" color="0x000001" bold="false" italic="false" align="left" leading="1">Verdana</fontstyle>
+		</object>
+		<object type="button" id="button2" guid="">
+			<position>10,400</position>
+			<size>100,22</size>
+			<url>assets/pobutton.swf</url>
+			<eventlist>
+				<event id="over" actionevent="rollover" actionresult="" target="" data="" />
+				<event id="out" actionevent="rollout" actionresult="" target="" data="" />
+				<event id="click" actionevent="click" actionresult="show_popup" target="" data="">
+					<data>
+						<popup id="testpopup2" draggable="true">
+							<type modal="false" persistant="false">simple</type>
+							<title>CSS in a popup</title>
+							<content><![CDATA[<body><p><span class='expanded'>Hello </span>World...</p><p><a href="#">Click me</a></p></body>]]></content>
+							<hpos>middle</hpos>
+							<vpos>high_center</vpos>
+						</popup>
+					</data>
+				</event>
+				<event id="release" actionevent="release" actionresult="" target="" data="" />
+			</eventlist>
+		</object>
+	</sheet>
+
+</page>

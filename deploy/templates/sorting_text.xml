@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<page>
+	
+	<config>
+		<!-- name of the page -->
+		<name>Testing Page</name>
+		<!-- type of page -->
+		<type>testing</type>
+		<!-- size -->
+		<pagesize>777,510</pagesize>
+		<!-- left, top, right, bottom -->
+		<pageborders>10,10,10,10</pageborders>
+		<!-- background image for the page -->
+		<pagebgimage></pagebgimage>
+		<!-- is this template running out side of the player? -->
+		<standalone>true</standalone>
+	</config>
+
+	<!-- 
+		On stage object data, text fields, etc
+		the target attrib of a <text> tag corresponts to a text field named "value_txt"
+	 -->
+	<pagecontent>
+		<!-- title, body, bodyleft and bodyright are adjusted based on page size and page borders -->
+		<text target="title"><![CDATA[Sorting Text Tile Question 1 of 1]]></text>
+		<text target="body"><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet, tellus quis interdum dapibus, augue augue molestie nisl, id tristique dui neque sit amet leo. Sed hendrerit. Vivamus tempus, urna non interdum interdum, diam ligula vestibulum risus, in porta elit lectus eu eros. Cras ac justo. Ut diam. Phasellus tristique magna quis sem. Praesent facilisis. Sed consectetur. Integer eu enim. Donec nec dolor sed orci fringilla sagittis. ]]></text>
+		<text target="bodyleft"><![CDATA[]]></text>
+		<text target="bodyright"><![CDATA[]]></text>
+	</pagecontent>
+
+	<!-- Intearction data here -->
+	<interaction>
+		<question type="matching" subtype="sorting" id="question2">
+			<prompt><![CDATA[Question Prompt]]></prompt>
+			<instruction><![CDATA[Instructions for the question]]></instruction>
+			<settings>
+				<tries>2</tries>
+				
+				<!-- location and width and y spacing of the choice column -->
+				<!--<choiceposition>20,150</choiceposition>
+				<choicesize>150,5</choicesize>-->
+				<!-- location and width of the match column -->
+				<!--<matchposition>300,180</matchposition>
+				<matchsize>200,250</matchsize>
+				<matchspacing>10</matchspacing>-->
+				<autosizeparts>true</autosizeparts>
+				<feedbacktype>popup</feedbacktype>
+				<randomizechoices>true</randomizechoices>
+				<allowincorrectmatches>true</allowincorrectmatches>
+				<resetonwa retainca="true">true</resetonwa>
+				<showanswers>true</showanswers>
+			</settings>
+			<cafeedback><![CDATA[This is the correct feedback]]></cafeedback>
+			<wafeedback><![CDATA[Incorrect 1]]></wafeedback>
+			<wafeedback><![CDATA[Incorrect 2]]></wafeedback>
+			<match id="match1"><![CDATA[Even Numbers]]></match>
+			<match id="match2"><![CDATA[Odd Numbers 1 1 1 1 1 1 1 1 1 1]]></match>
+			<choice correct="true" id="choice1">
+				<text><![CDATA[this is choice 1 this is choice 1 this is choice 1 ]]></text>
+				<match>match2</match>
+			</choice>
+			<choice correct="false" id="choice2">
+				<text><![CDATA[two]]></text>
+				<match>match1</match>
+			</choice>
+			<choice correct="true" id="choice3">
+				<text><![CDATA[this is choice 3]]></text>
+				<match>match2</match>
+			</choice>
+			<choice correct="false" id="choice4">
+				<text><![CDATA[this is choice 4]]></text>
+				<match>match1</match>
+			</choice>
+			<choice correct="false" id="choice5">
+				<text><![CDATA[arg!]]></text>
+				<match>match3</match>
+			</choice>
+		</question>
+	</interaction>
+
+</page>

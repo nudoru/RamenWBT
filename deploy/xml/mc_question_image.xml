@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<page>
+	
+	<config>
+		<!-- name of the page -->
+		<name>Testing Page</name>
+		<!-- type of page -->
+		<type>testing</type>
+		<!-- size -->
+		<pagesize>777,510</pagesize>
+		<!-- left, top, right, bottom -->
+		<pageborders>10,10,10,10</pageborders>
+		<!-- background image for the page -->
+		<pagebgimage></pagebgimage>
+		<!-- is this template running out side of the player? -->
+		<standalone>true</standalone>
+	</config>
+
+	<!-- 
+		On stage object data, text fields, etc
+		the target attrib of a <text> tag corresponts to a text field named "value_txt"
+	 -->
+	<pagecontent>
+		<!-- title, body, bodyleft and bodyright are adjusted based on page size and page borders -->
+		<text target="title"><![CDATA[Quizzing Template - Multiple Choice with Images]]></text>
+		<text target="body"><![CDATA[Choose the best response(s) below. Click <b>Submit</b> when done.]]></text>
+		<text target="bodyleft"><![CDATA[]]></text>
+		<text target="bodyright"><![CDATA[]]></text>
+	</pagecontent>
+
+	<!-- Intearction data here -->
+	<interaction>
+		<question type="choice" subtype="multi_select" id="question1">
+			<instruction><![CDATA[Instructions for the question]]></instruction>
+			<settings>
+				<tries>2</tries>
+				<autosizeparts>false</autosizeparts>
+				<feedbacktype>popup</feedbacktype>
+				<showanswers>true</showanswers>
+				<resetonwa>true</resetonwa>
+			</settings>
+			<cafeedback><![CDATA[This is the correct feedback]]></cafeedback>
+			<wafeedback><![CDATA[Incorrect 1]]></wafeedback>
+			<wafeedback><![CDATA[Incorrect 2]]></wafeedback>
+			<wafeedback><![CDATA[Incorrect 3]]></wafeedback>
+			<choice correct="true" id="choice1">
+				<text><![CDATA[Choice 1]]></text>
+				<image url="assets/solo_female_100.jpg" x="" y="" width="100" height="100" />
+			</choice>
+			<choice correct="false" id="choice2">
+				<text><![CDATA[Choice 2]]></text>
+				<image url="assets/solo_male_100.jpg" x="" y="" width="100" height="100" />
+			</choice>
+			<choice correct="true" id="choice3">
+				<text><![CDATA[Choice 3]]></text>
+				<image url="assets/solo_female_100.jpg" x="" y="" width="100" height="100" />
+			</choice>
+		</question>
+	</interaction>
+
+</page>

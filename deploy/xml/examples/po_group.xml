@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<page>
+	
+	<config>
+		<!-- name of the page -->
+		<name>Testing Page</name>
+		<!-- type of page -->
+		<type>testing</type>
+		<!-- size -->
+		<pagesize>750,360</pagesize>
+		<!-- left, top, right, bottom -->
+		<pageborders>10,10,10,10</pageborders>
+	</config>
+	
+	<!-- 
+		On stage object data, text fields, etc
+		the target attrib of a <text> tag corresponts to a text field named "value_txt"
+	 -->
+	<pagecontent>
+		<!-- title, body, bodyleft and bodyright are adjusted based on page size and page borders -->
+		<text target="title"><![CDATA[Page object events - Group]]></text>
+		<text target="body"><![CDATA[]]></text>
+		<text target="bodyleft"><![CDATA[]]></text>
+		<text target="bodyright"><![CDATA[The group page object allows you to nest several POs in a single object. The group may have an eventlist, but the object with in the group cannot.]]></text>
+	</pagecontent>
+
+	<!-- Page Objects go here -->
+	<sheet>
+		<object type="group" id="group1" guid="">
+			<position>10,50</position>
+			<transitionin effect="drop_from_top" delay="0" mode="play" />
+			<children>
+				<object type="gradrect" id="rect1" guid="">
+					<position>0,0</position>
+					<size>300,100</size>
+					<linecolor>0xff0000</linecolor>
+					<lightcolor>0x00ff00</lightcolor>
+					<darkcolor>0x0000ff</darkcolor>
+					<shadow>false</shadow>
+					<reflection>false</reflection>
+				</object>
+				<object type="graphic" id="graphic1" guid="">
+					<position>200,50</position>
+					<size>250,250</size>
+					<scale>100,100</scale>
+					<rotation>-10</rotation>
+					<borderstyle></borderstyle>
+					<borderwidth>10</borderwidth>
+					<shadow>true</shadow>
+					<caption>This is a caption</caption>
+					<url startframe="3" playmode="none">assets/mframe.swf</url>
+				</object>
+			</children>
+		</object>
+
+	</sheet>
+
+</page>

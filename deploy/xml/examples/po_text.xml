@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<page>
+	
+	<config>
+		<!-- name of the page -->
+		<name>Testing Page</name>
+		<!-- type of page -->
+		<type>testing</type>
+		<!-- size -->
+		<pagesize>750,360</pagesize>
+		<!-- left, top, right, bottom -->
+		<pageborders>10,10,10,10</pageborders>
+	</config>
+	
+	<!-- 
+		On stage object data, text fields, etc
+		the target attrib of a <text> tag corresponts to a text field named "value_txt"
+	 -->
+	<pagecontent>
+		<!-- title, body, bodyleft and bodyright are adjusted based on page size and page borders -->
+		<text target="title"><![CDATA[Text Page Object]]></text>
+		<text target="body"><![CDATA[]]></text>
+		<text target="bodyleft"><![CDATA[]]></text>
+		<text target="bodyright"><![CDATA[Text page objects use any embedded font. May scroll or not. Scrolling text object may not have events.]]></text>
+	</pagecontent>
+
+	<!-- Page Objects go here -->
+	<sheet>
+		<object type="text" id="text1" guid="">
+			<position>10,50</position>
+			<size>300,100</size>
+			<reflection>true</reflection>
+			<content><![CDATA[getlatin:2,5]]></content>
+			<transitionin effect="slide_from_left" delay="0" mode="play" />
+			<scrolling>false</scrolling>
+			<fontstyle size="24" color="0x006699" bold="false" italic="false" align="left" leading="1">Verdana</fontstyle>
+		</object>
+		
+		<object type="text" id="text2" guid="">
+			<position>10,140</position>
+			<size>300,170</size>
+			<content><![CDATA[getlatin:300,400]]></content>
+			<transitionin effect="slide_from_left" delay="0" mode="play" />
+			<scrolling>true</scrolling>
+			<fontstyle size="10" color="0xC03700" bold="false" italic="false" align="left" leading="1">Verdana</fontstyle>
+		</object>
+		
+		<object type="textbox" id="text3" guid="">
+			<position>400,150</position>
+			<size>200,100</size>
+			<content><![CDATA[getlatin:20,30]]></content>
+			<radius>20</radius>
+			<linecolor>0x999999</linecolor>
+			<lightcolor>0eeeeee</lightcolor>
+			<darkcolor>0xcccccc</darkcolor>
+			<borderwidth>5</borderwidth>
+			<shadow>true</shadow>
+			<reflection>false</reflection>
+			<scrolling>false</scrolling>
+			<fontstyle size="10" color="0x000001" bold="false" italic="false" align="center" leading="1">Verdana</fontstyle>
+		</object>
+	</sheet>
+
+</page>

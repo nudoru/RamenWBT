@@ -1,0 +1,306 @@
+Player Framework Master To Do List
+Last updated: 11.17.09
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+WATCH ISSUES
+
+Page that tries to disable Next/Back/Refesh with a NavigationUIEvent: 
+	REASON - colliding with the player unlocking linear navigation on template page render
+	SOLUTION - move player unlock to page load, not render
+Backing up in to an unanswered scored page
+	REASON - this isn't trapped
+	SOLTUION - add logic
+A persitant popup looses tabindex after a page change
+	The AssessmentManager class doesn't support persitant popups, all non framework items are cleared on page change
+----------------------------------------------------------------------------------------------------
+OPEN
+[ ] = open, [] = low pri, [!] = high pri, [x] = completed, [?] = unsure, [-] partial
+----------------------------------------------------------------------------------------------------
+
+TEST!!!
+	[ ] reset scored pages on resume from incomplete
+	[ ] reset scored pages on resume from pass
+	[ ] reset scored pages on resume from fail
+	[ ] failing remain as incomplete
+	[ ] getting/setting settings prefs in suspend data
+	[ ] test dynamic formated text in popups
+----------------------------------------------------------------------------------------------------
+FRAMEWORK
+
+[ ] standalone simple messagebox, currently only in MultipleDropDown
+
+[ ] mc question template displaying offset down/right
+
+[ ] po audio player needs to properly size with the transcript button added
+
+[ ] update po/Transition.as to work with new TweenMax filter classes - color/blur tweens disabled for now
+
+[ ] opt - PageListItem - pull from XML not variables
+
+[ ] Question class and intr object to support long-fill-in type
+[ ] po event to reset scored interactions for the whole course
+	function in sitemodel but not tested
+[ ] po event to reset scored interactions for a node
+	function in sitemodel but not tested
+[ ] disable all navigation until X seconds passed
+[ ] test player commands from popup
+[ ] print popup
+[ ] print page
+[ ] an additional status like scored but not? interaction? follow same rules, but not be counted in overall score?
+
+[ ] Key press / 508 Functions
+	[ ] give tab index to all text fields
+
+[ ] Logic
+	[ ] set LMS vars, score, status
+	[ ] save/resume variables
+	[-] set type on var creation
+	[ ] run a POEvent on a given sheet
+		
+[ ] navigation enhancements
+	[-] history based back navigation
+	[ ] change next/back destination on page event, branching
+	[ ] conditionally change next on variables
+		[ ] course score
+		
+[ ] LMS Functions
+	[x] SCORM 2004 wrapper/manifest
+	[x] SCORM 2004 mulimanifest
+	[] completion status: manual
+	[] po event for page level: set incomplete, completed, pass, failed and score
+		[ ] how to overwrite page status if already written?
+	[] po event for course level: set incomplete, completed, pass, failed and score
+	[ ] completion on mastery score
+
+Assessment Functionality
+	[x] set/get score
+	[x] score based on scored pages status
+	[x] "assessment" node type
+	[-] assessment global class - tracking data, 5%
+	[ ] reset pages on a chapter level - subpages are set to "incomplete" not "not attempted"
+	[ ] reset pages - if the status isn't "completed", ignore saved state data?
+	[ ] scored page weight
+	[ ] score based on weighting - points out of X
+	[ ] randomize pages in assessment node
+	[ ] timed assessment (run by assessment class)
+	[ ] show only X pages of X in assessment node
+[ ] add lomap (learning objective map) to lesson and page node (for assessment)
+[ ] create results page for assessment:
+	[ ] total questions/# correct
+	[ ] % score
+	[ ] lomap total questions/lomap # correct
+	[ ] lomap % score
+[ ] bookmark to page ID X when exiting from assessment
+[ ] get lomap score and pass/fail based off of course master score
+[ ] set lomap match lesson to incomplete on fail
+[ ] interaction level tracking
+[ ] limit # of assessment tries - lock in a fail after 2
+
+
+Low Pri
+[-] move animation sequence from page to sheet
+	[ ] parse xml
+	[ ] connect and test
+[ ] POEvent triggering an animation sequence? event from sheet to parent to start it? from POEventManager it's disabled due to sheet implimentaion
+[ ] in pagerenderer, move these to Settings? getRamenContentLayer(), etc.
+[ ] keybinding to refresh the page?
+[ ] page template accept XML file name as query string
+[ ] page template accept XML passed as a var after loading? compare to how it's done now
+[] transitions data in settings class
+[] content function - 	show current date
+[] content function - 	show current time
+[] BG audio
+[] BG audio SWF controls
+[?] on animation finish event - but what would it tie to?
+[?] on transition finish event - but what would it tie to?
+
+----------------------------------------------------------------------------------------------------
+CLOSED
+----------------------------------------------------------------------------------------------------
+
+Nov 07 to May 08
+	[x] Full browser flash
+	[x] external BG swf
+	[x] page Class shell
+	[x] tag/credits line area, but removed on 2.09.09
+	[x] page area alignment dynamic: top, mid, bottom, left, center, right
+	[x] menu
+		[x] section/node menu contents
+		[x] page menu contents
+	[x] deep linking
+	[x] load external page SWFs with preloading/status bar
+	[x] load external audio SWF
+	[x] remove MainUICont library sprite
+	[x] example tileable BG 
+	[x] break CenteredView up, 1 - base view classes, 2 - centered view subclass
+	[x] initialize functions for theme files
+	[x] better layers
+	[x] better about appearence
+	[x] error diags for image loader
+	[x] external buttons, and other assets?
+	[x] loading bar animation for font loading
+	[x] reusable XML classes for pages
+	[x] page template get name from name in <config> block
+	[x] document class for generictemplate
+	[-] BUG - po events, need to trap release outside and drag outside
+	[x] BUG - po events, transitions. transition out not working - it's blending tin and tout - need to reset to "home" for tout?
+	[x] rounded corners borders for images
+	[x] PO event - light box
+	[x] PO - blendmode?
+	[x] time elapsed event
+	[x] new const class - ObjectStatus - incomplete, complete, etc.
+	[x] content function - own class
+	[x] PO's - hasMouseEvents fixed
+	[x] hasMouseEvents and hasTimerEvents prop in PageRender and POEventManager
+	[x] use TweenFilterLite for transitions - where needed
+2-9-09 to July
+	[x] add errors to loaders 
+	[x] fix the very first page display - why does it require a refresh?
+	[x] how can the very last page set complete? not on STOP - but on status update?
+	[x] move page status update from NodeModel to page template
+	[x] BUG template start() func being called twice
+	[x] pass pages UI informaiton in Settings class - std color, etc.
+	[x] memory usage graph
+	[x] BUG mouse position tool - positions are off
+			fix: offsets
+	[x] BUG - collision on text field scroll bar - TypeError: Error #1034: Type Coercion failed: cannot convert fl.events::ComponentEvent@1115e101 to ramen.common.NavigationUIEvent
+			fix: string literals of events were the same in both classes. renamed in NavUIEvent
+	[x] Text Zoom
+		[x] simple text fields observe
+		[x] potext objects
+		[x] message boxes
+		[x] message box, title txt multi line
+		[x] mask page area
+		[x] vscroll bar to page area
+	[x] slide pages left/right transition
+	[x] OPT template interface, impliment in Template
+	[x] pass pages defauly width, height in initialize
+	[x] if a modal popup is showing, disable keyboard navigation
+	[x] set scroll wheel = false for dynamic text fields
+	[x] add error codes to page loader class
+	[x] enable SWF address toggle
+	[x] tested SCORM 1.2 tracking - SUCCESS. validates that internal tracking is working fine.
+	[x] show animation as shutting down for LMS exit?
+	[x] separate theme.xml file from site.xml file
+	[x] siteview - disable page
+	[x] add page modal mode to the popupmanager
+	[x] if the next button is disabled on the main navigation (via NavigationUIEvent), disable the key shortcut
+	[x] Pop up Box
+		[x] PopupManager class
+		[x] modal popups
+		[x] box types:
+			[x] simple
+			[x] icon
+			[x] error
+			[x] correct
+			[x] incorrect
+			[x] neutral
+			[x] "sure you want to exit?" box
+			[x] lightbox
+		[x] align popup to site coordinates
+		[x] align popup to page coordinates
+		[x] new event for template - onpopupclose - to respond to the closed popup
+		[x] animate popup open and close
+		[x] when closing a pop up, need to adjust _CurrentPopUp to the next highest
+	[x] going to a nonexistant page id thows an error - should be caught and display warning
+	[x] fixed POGroup not working
+	[x] sheet class - mvoe PObjects from page renderer
+		[x] evaluate memory leaks
+		[x] in PR fix playAnimationIDonPO
+		[x] redo lightbox functionality - from POEventManager it's disabled due to sheet implimentaion
+	[x] Template enhancements
+		[x] subclass template 
+		[x] simple text objects to support text zoom
+		[x] text POs to support text zoom
+		[x] page background
+		[x] simple type - image/swf
+		[x] simplepagerender/simpletempate with NO PObject support
+	[x] BUG - sheet generating error on destroy, fixed: trying to removed object when it wasn't initialized
+	[x] change POButton - trigger CLICK on release not down
+	[x] Rewrote POButton and button SWF format. Now works with tab and enter keys
+	[x] isNavGlobalLocked()
+	[x] isNavNextLocked()
+	[x] cheatmode 
+	[x] cheatkeyenabled in xml
+	[x] disable all linear navigation until current page has loaded
+	[x] rules for scored pages
+		[x] how to tell if they're answered or not?
+		[x] lock navigation if unanswered
+	[x] dynamic hilight color in themes
+	[x] added _Basecolor to GradRect and RoundGradRect - all objects that use it support this new prop
+	[x] removed bounded rect from page objects. may cause issues?
+	[x] pobject rollovers use GradRect
+	[x] pobject hilight styles: solid, gradient, rounded:rad
+	[x] fixed bug in PObject Group destroy()
+	[x] sheet in a popup
+	[x] set current page as incomplete if no status set on start
+	[x] LMS config from lms section of site.xml only
+	[x] page level tracking setup
+		[x] set/get suspend data
+			[x] get node status string
+			[x] apply node status string
+	[x] when not complete, set incomplete and set latency
+	[x] completion status: on last page
+	[x] completion status: view all pages
+	[x] external CSS support
+	[x] OPT Settings, LMSData, PopUpManager, Debugger and SiteModel classes are now a singletons
+	[x] OPT remove unused Vars in site model
+	[x] OPT site model - pull all data from XML, don't parse
+	[x] basic SheetManager class
+	[x] basic LogicManager class
+	[x] variables supported in autocontent class from any variables defined by LogicManager. {$varname$} in text
+	[x] AssessmentManager class and supporting items
+	[x] AssessmentManager class support Framework items
+	[x] AccessibilityManager and AccessibilityItem classes
+	[x] Tab index management
+	[x] Senolcular virtual mouse acts as activator to enter key pressed when using tab
+	[x] squeeze page transition
+	[x] useaccessibility param in the site.xml file
+	[x] Settings sets defaults on first instantiation
+	[x] save/get Settings prefs from suspend data
+	[x] LSOManager basic structure
+	[x] Meta ID prop in site.xml file
+	[x] use LSO for local suspend data
+	[x] clear LSO button in the dubugger panel
+	[x] use LSO if SCORM is set and there is no connection to the LMS, use LSO must be set to true
+	[x] LMSConnector updated to support SCORM2004 api calls
+	[x] added getInteractionObject function to Question class
+	[x] bug fix - page squeeze in transition effect
+	[x] PageLoader passes the page status object on initialize
+	[x] Question class updated to communicate w/ AssessmentManager
+	[x] fixed issues with virtual mouse and "clicking" on MovieClip types
+	[x] AccessibilityManager clears focus properly on page change
+	[x] interactions record saved state to interaction item var and recall it on revisit (reset to last saved state pior to last submit)
+	[x] reset scored pages - on entry into a module, pages may reset to unanswered state
+	[x] created QuestionTemplate class (broke out reusable functionality from MCQuestion template)
+	[x] added page level prop in site.xml - "refreshontxtszch" - don't refresh the page on a text resize event
+	[x] param for Questions - reset selected answers on WA "resetonwa"
+	[x] SCORM 2004 - passes cmi.success_status on exit when completed
+	[x] SCORM 2004 - tested simple Single SCO and confirmed working on Test Track
+	[x] memory optimizations in matching, sorting and ordering templates. 
+	[x] memory optimization in AccessibilityManager item removal
+10.23.09
+	[x] scrolling and cropping for nodes now defaults to flase
+	[x] fixed custom popup size bug
+	[x] added accessibility text item adder functions - assign tabindex to text field for screen readers to pickup
+10.27.09
+	[x] image of last page fades to 50% over 2sec as new page is loading - visial cue that something is going on
+10.29.09
+	[x] upgraded TweenLight from 5.x to 11
+	[x] fixed bug in AbstractView with page tranisions, error on first page, _LastPageImage was null causng TweenLight error
+11.06.09
+	[x] about message file name should have a prefix of the current player.swf name. so that unique players can have their own swf - bacplayer.swf = bacplayer_about.swf
+	[x] preloader centers on size_mc not hardcoded numbers - different preloaders for different player that share same code base
+	[x] removed accessibility from question interactions
+	[x] templates with MCs on stage - hide until they're dynamically placed - shows a jump on slow connections
+11.16.09
+	[x] po audio player supports transcript
+11.17.09
+	[x] mandatory nodes - allows for skippable content in lessons - NOTE: lessons will show "incomplete" status instead of a "not attempted" status
+	[x] fixed issue with nav.swf items not dispatcing correct NavChangeEvents and the right functions were not being called
+		added new nav event: page jump - dispatched when a page jumps rather than navigation select
+	[x] force linear progression from navigation - page to page shouldn't be limited - limited to scope of the node's parent completion
+		lms.forcelinearnavl
+	[x] center button in popup width
+11.24.09
+	[x] width and height in PageRenderer come from site level page width/height first instead of page xml level values

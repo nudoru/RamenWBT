@@ -1,0 +1,107 @@
+﻿<data>
+	<layouts>
+		
+		<layout name="layout test">
+			<position>400,150</position>
+			<size>200,100</size>
+			<content><![CDATA[getlatin:20,30]]></content>
+			<radius>20</radius>
+			<linecolor>0x999999</linecolor>
+			<lightcolor>0eeeeee</lightcolor>
+			<darkcolor>0xcccccc</darkcolor>
+			<borderwidth>5</borderwidth>
+			<shadow>true</shadow>
+			<reflection>false</reflection>
+			<scrolling>false</scrolling>
+			<transitionin effect="slide_from_left" delay="0" mode="play" />
+			<fontstyle size="10" color="0x000001" bold="false" italic="false" align="center" leading="1">Verdana</fontstyle>
+		</layout>
+		
+		<!--
+		<layout name="title">
+			<xpos>10</xpos>
+			<ypos>20</ypos>
+			<width>pagewidth-20</width>
+			<height></height>
+			<textstyle>title</textstyle>
+			<borderstyle></borderstyle>
+			<transition-in delay=""></transition-in>
+		</layout>
+		
+		<layout name="subtitle">
+			<xpos>10</xpos>
+			<ypos>45</ypos>
+			<width>pagewidth-20</width>
+			<height></height>
+			<textstyle>subtitle</textstyle>
+			<borderstyle></borderstyle>
+			<transition-in delay=""></transition-in>
+		</layout>
+		
+		<layout name="body">
+			<xpos>10</xpos>
+			<ypos>80</ypos>
+			<width>pagewidth-20</width>
+			<height></height>
+			<textstyle>body</textstyle>
+			<borderstyle></borderstyle>
+			<transition-in delay=""></transition-in>
+		</layout>
+		
+		<layout name="custom">
+			<xpos>0</xpos>
+			<ypos>0</ypos>
+			<width>100</width>
+			<height></height>
+			<borderstyle>0</borderstyle>
+			<textstyle>body</textstyle>
+			<borderstyle></borderstyle>
+			<transition-in delay=""></transition-in>
+		</layout>
+		
+		<layout name="body_left">
+			<xpos>10</xpos>
+			<ypos>80</ypos>
+			<width>pagewidth*.6</width>
+			<height></height>
+			<textstyle>body</textstyle>
+			<borderstyle></borderstyle>
+			<transition-in delay=""></transition-in>
+		</layout>
+		
+		<layout name="body_right">
+			<xpos>pagewidth*.5</xpos>
+			<ypos>80</ypos>
+			<width>pagewidth*.5</width>
+			<height></height>
+			<textstyle>body</textstyle>
+			<borderstyle></borderstyle>
+			<transition-in delay=""></transition-in>
+		</layout>
+		
+		<layout name="image_left">
+			<xpos>20</xpos>
+			<ypos>120</ypos>
+			<borderstyle>default</borderstyle>
+			<transition-in delay="1">blur_in</transition-in>
+		</layout>
+		
+		<layout name="image_right">
+			<xpos>pagewidth*.65</xpos>
+			<ypos>120</ypos>
+			<borderstyle>default</borderstyle>
+			<transition-in delay=""></transition-in>
+		</layout>
+		
+		<layout name="prompt">
+			<xpos>10</xpos>
+			<ypos>0</ypos>
+			<width>pagewidth-20</width>
+			<height></height>
+			<textstyle>body</textstyle>
+			<borderstyle></borderstyle>
+			<transition-in delay=""></transition-in>
+		</layout>
+	</layouts>-->
+
+</data>

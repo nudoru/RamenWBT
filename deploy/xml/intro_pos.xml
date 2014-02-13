@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<page>
+	
+	<config>
+		<!-- name of the page -->
+		<name>Testing Page</name>
+		<!-- type of page -->
+		<type>testing</type>
+		<!-- size -->
+		<pagesize></pagesize>
+		<!-- left, top, right, bottom -->
+		<pageborders>10,10,10,10</pageborders>
+	</config>
+	
+	<!-- 
+		On stage object data, text fields, etc
+		the target attrib of a <text> tag corresponts to a text field named "value_txt"
+	 -->
+	<pagecontent>
+		<!-- title, body, bodyleft and bodyright are adjusted based on page size and page borders -->
+		<text target="title"><![CDATA[Page Objects]]></text>
+		<text target="body"><![CDATA[Page objects are on screen items that may be to customize a page’s appearance  and add extra functionality.<ul><li>Text areas (may scroll)</li><li>Text box (may scroll)</li><li>Shapes – lines, rectangles, rounded corner rectangles, circles and ellipses</li><li>Images (GIF, JPG and PNG) </li><li>Flash animations (any type of SWF file)</li><li>Hotspots</li><li>Audio player (on road map)</li><li>Flash video (FLV) player (on roadmap)</li><li>Complex object – custom coded Flash object created by a Flash developer</li><li>Event manager – invisible object for controlling actions on multiple items</li></ul>]]></text>
+		<text target="bodyleft"><![CDATA[]]></text>
+		<text target="bodyright"><![CDATA[]]></text>
+	</pagecontent>
+
+	<!-- Page Objects go here -->
+	<sheet>
+		<!--<object type="text" id="text1" guid="">
+			<position>10,100</position>
+			<size>300,100</size>
+			<content><![CDATA[Click to set a page status]]></content>
+			<fontstyle size="18" color="0x006699" bold="false" italic="false" align="left" leading="1">Verdana</fontstyle>
+			<eventlist>
+				<event id="release" actionevent="release" actionresult="set_page_status" target="" data="passed" />
+			</eventlist>
+		</object>-->
+	</sheet>
+
+</page>

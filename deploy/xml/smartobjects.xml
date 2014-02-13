@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<page>
+	
+	<config>
+		<!-- name of the page -->
+		<name>Testing Page</name>
+		<!-- type of page -->
+		<type>testing</type>
+		<!-- size -->
+		<pagesize></pagesize>
+		<!-- left, top, right, bottom -->
+		<pageborders>10,10,10,10</pageborders>
+	</config>
+	
+	<!-- 
+		On stage object data, text fields, etc
+		the target attrib of a <text> tag corresponts to a text field named "value_txt"
+	 -->
+	<pagecontent>
+		<!-- title, body, bodyleft and bodyright are adjusted based on page size and page borders -->
+		<text target="title"><![CDATA[getlatin:5,5]]></text>
+		<text target="body"><![CDATA[getlatin:200:300]]></text>
+		<text target="bodyleft"><![CDATA[]]></text>
+		<text target="bodyright"><![CDATA[]]></text>
+	</pagecontent>
+
+	<!-- Page Objects go here -->
+	<sheet>
+		<!--
+		<object type="interactiveswf" id="speechbubble" guid="">
+			<position>5,288</position>
+			<size>732,115</size>
+			<url>assets/speechbubble_bottom.swf</url>
+			<objectdata>
+				<text><![CDATA[You can also review your transcripts using the ALP. These are a record of the courses you’ve already completed. Simply go to the My Transcript section. From this section, just enter a time period and your results from that time period will display.]]></text>
+			</objectdata>
+			<bmfilter type="glow">
+				<color>0x000000</color>
+				<alpha>.5</alpha>
+				<blur>5</blur>
+				<strength>1</strength>
+			</bmfilter>
+		</object>-->
+			
+		<object type="audioplayer" id="audio1" guid="">
+			<position>-2,535</position>
+			<size>620,30</size>
+			<playerswf>templates/po/poaudioplayer_white.swf</playerswf>
+			<url playmode="auto" playdelay="1">assets/test.mp3</url>
+			<background>false</background>
+			<transcript><![CDATA[It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).]]></transcript>
+		</object>
+	</sheet>
+
+</page>

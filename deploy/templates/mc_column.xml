@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<page>
+	
+	<config>
+		<!-- name of the page -->
+		<name>Testing Page</name>
+		<!-- type of page -->
+		<type>testing</type>
+		<!-- size -->
+		<pagesize>777,510</pagesize>
+		<!-- left, top, right, bottom -->
+		<pageborders>10,10,10,10</pageborders>
+		<!-- background image for the page -->
+		<pagebgimage></pagebgimage>
+		<!-- is this template running out side of the player? -->
+		<standalone>true</standalone>
+	</config>
+
+	<!-- 
+		On stage object data, text fields, etc
+		the target attrib of a <text> tag corresponts to a text field named "value_txt"
+	 -->
+	<pagecontent>
+		<!-- title, body, bodyleft and bodyright are adjusted based on page size and page borders -->
+		<text target="title"><![CDATA[Quizzing Template - Column]]></text>
+		<text target="body"><![CDATA[Determing if each step must be performed as part of process X. Click <b>Submit</b> when done.]]></text>
+		<text target="bodyleft"><![CDATA[]]></text>
+		<text target="bodyright"><![CDATA[]]></text>
+	</pagecontent>
+
+	<!-- Intearction data here -->
+	<interaction>
+		<question type="choice" subtype="multi_select" id="question1">
+			<instruction><![CDATA[Instructions for the question]]></instruction>
+			<scenario id="1" button="false">
+				<title><![CDATA[scenario title]]></title>
+				<text><![CDATA[This is the sceanrio text]]></text>
+			</scenario>
+			<settings>
+				<tries>2</tries>
+				<caaction>do_this</caaction>
+				<waaction>do_this_also</waaction>
+				<feedbacktype>popup</feedbacktype>
+				<showanswers>true</showanswers>
+				<resetonwa>true</resetonwa>
+			</settings>
+			<cafeedback><![CDATA[This is the correct feedback]]></cafeedback>
+			<wafeedback><![CDATA[Incorrect 1]]></wafeedback>
+			<wafeedback><![CDATA[Incorrect 2]]></wafeedback>
+			<wafeedback><![CDATA[Incorrect 3]]></wafeedback>
+			<choicecolumnlabel>Process Steps</choicecolumnlabel>
+			<matchcolumnlabel>Required?</matchcolumnlabel>
+			<choice type="header" id="header4">
+				<text><![CDATA[Sub Process 1]]></text>
+			</choice>
+			<choice correct="true" id="choice1">
+				<text><![CDATA[Step 1]]></text>
+			</choice>
+			<choice correct="false" id="choice2">
+				<text><![CDATA[Step 2]]></text>
+			</choice>
+			<choice type="header" id="header4">
+				<text><![CDATA[Sub Process 2]]></text>
+			</choice>
+			<choice correct="true" id="choice3">
+				<text><![CDATA[Step 3]]></text>
+			</choice>
+			<choice type="header" id="header4">
+				<text><![CDATA[Sub Process 3]]></text>
+			</choice>
+			<choice correct="false" id="choice4">
+				<text><![CDATA[Step 4]]></text>
+			</choice>
+		</question>
+	</interaction>
+
+</page>

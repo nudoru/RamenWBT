@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<page>
+	
+	<config>
+		<!-- name of the page -->
+		<name>Testing Page</name>
+		<!-- type of page -->
+		<type>testing</type>
+		<!-- size -->
+		<pagesize>750,360</pagesize>
+		<!-- left, top, right, bottom -->
+		<pageborders>10,10,10,10</pageborders>
+	</config>
+	
+	<!-- 
+		On stage object data, text fields, etc
+		the target attrib of a <text> tag corresponts to a text field named "value_txt"
+	 -->
+	<pagecontent>
+		<!-- title, body, bodyleft and bodyright are adjusted based on page size and page borders -->
+		<text target="title"><![CDATA[Page object events - Navigational]]></text>
+		<text target="body"><![CDATA[]]></text>
+		<text target="bodyleft"><![CDATA[]]></text>
+		<text target="bodyright"><![CDATA[]]></text>
+	</pagecontent>
+
+	<!-- Page Objects go here -->
+	<sheet>
+		<object type="text" id="text1" guid="">
+			<position>10,100</position>
+			<size>300,100</size>
+			<content><![CDATA[Click here to go home]]></content>
+			<fontstyle size="18" color="0x006699" bold="false" italic="false" align="left" leading="1">Verdana</fontstyle>
+			<eventlist>
+				<event id="release" actionevent="release" actionresult="goto_pageid" target="homepage" data="" />
+			</eventlist>
+		</object>
+		<object type="text" id="text2" guid="">
+			<position>10,150</position>
+			<size>300,100</size>
+			<content><![CDATA[Adobe.com]]></content>
+			<fontstyle size="18" color="0x009933" bold="false" italic="false" align="left" leading="1">Verdana</fontstyle>
+			<eventlist>
+				<event id="release" actionevent="release" actionresult="goto_url" target="http://www.adobe.com" data="" />
+			</eventlist>
+		</object>
+		
+		
+		<object type="text" id="text3" guid="">
+			<position>300,100</position>
+			<size>400,100</size>
+			<content><![CDATA[Click here to restart this page]]></content>
+			<fontstyle size="18" color="0x660099" bold="false" italic="false" align="left" leading="1">Verdana</fontstyle>
+			<eventlist>
+				<event id="release" actionevent="release" actionresult="restart_page" target="" data="" />
+			</eventlist>
+		</object>
+		
+		<object type="text" id="text4" guid="">
+			<position>300,150</position>
+			<size>400,100</size>
+			<content><![CDATA[Click here to go to the next page]]></content>
+			<fontstyle size="18" color="0x660099" bold="false" italic="false" align="left" leading="1">Verdana</fontstyle>
+			<eventlist>
+				<event id="release" actionevent="release" actionresult="goto_nextpage" target="" data="" />
+			</eventlist>
+		</object>
+		<object type="text" id="text5" guid="">
+			<position>300,200</position>
+			<size>400,100</size>
+			<content><![CDATA[Click here to go to the previous page]]></content>
+			<fontstyle size="18" color="0x660099" bold="false" italic="false" align="left" leading="1">Verdana</fontstyle>
+			<eventlist>
+				<event id="release" actionevent="release" actionresult="goto_prevpage" target="" data="" />
+			</eventlist>
+		</object>
+	</sheet>
+
+</page>

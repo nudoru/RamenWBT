@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<page>
+	
+	<config>
+		<!-- name of the page -->
+		<name>Testing Page</name>
+		<!-- type of page -->
+		<type>testing</type>
+		<!-- size -->
+		<pagesize>777,510</pagesize>
+		<!-- left, top, right, bottom -->
+		<pageborders>10,10,10,10</pageborders>
+		<!-- background image for the page -->
+		<pagebgimage></pagebgimage>
+	</config>
+	
+	<!-- 
+		On stage object data, text fields, etc
+		the target attrib of a <text> tag corresponts to a text field named "value_txt"
+	 -->
+	<pagecontent>
+		<!-- title, body, bodyleft and bodyright are adjusted based on page size and page borders -->
+		<text target="title"><![CDATA[Item path selector]]></text>
+		<text target="body"><![CDATA[May require a little AS template customization]]></text>
+		<text target="bodyleft"><![CDATA[]]></text>
+		<text target="bodyright"><![CDATA[]]></text>
+	</pagecontent>
+
+	<interaction>
+		<list id="list1" type="">
+			<settings>
+				<!-- location and width and y spacing of the item column -->
+				<!--blank to autocenter <itemposition>120,50</itemposition>-->
+				<itemsize>180,180</itemsize>
+				<itemspacing>20</itemspacing>
+			</settings>
+			
+			<item id="item1" type="" x="" y="" width="" height="">
+				<title><![CDATA[Item 1]]></title>
+				<mediaurl startframe="1" playmode="none">assets/item.png</mediaurl>
+				<link>pageid</link>
+			</item>
+			<item id="item2" type="" x="" y="" width="" height="">
+				<title><![CDATA[Item 2]]></title>
+				<mediaurl startframe="1" playmode="none">assets/item.png</mediaurl>
+				<link>pageid</link>
+			</item>
+			<item id="item3" type="" x="" y="" width="" height="">
+				<title><![CDATA[Item 3]]></title>
+				<mediaurl startframe="1" playmode="none">assets/item.png</mediaurl>
+				<link>pageid</link>
+			</item>
+			<item id="item4" type="" x="" y="" width="" height="">
+				<title><![CDATA[Item 4]]></title>
+				<mediaurl startframe="1" playmode="none">assets/item.png</mediaurl>
+				<link>pageid</link>
+			</item>
+			<item id="item5" type="" x="" y="" width="" height="">
+				<title><![CDATA[Item 5]]></title>
+				<mediaurl startframe="1" playmode="none">assets/item.png</mediaurl>
+				<link>pageid</link>
+			</item>
+		</list>
+	</interaction>
+
+</page>

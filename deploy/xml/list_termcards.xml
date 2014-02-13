@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<page>
+	
+	<config>
+		<!-- name of the page -->
+		<name>Testing Page</name>
+		<!-- type of page -->
+		<type>testing</type>
+		<!-- size -->
+		<pagesize>777,510</pagesize>
+		<!-- left, top, right, bottom -->
+		<pageborders>10,10,10,10</pageborders>
+		<!-- background image for the page -->
+		<pagebgimage></pagebgimage>
+		<!-- is this template running out side of the player? -->
+		<standalone>true</standalone>
+	</config>
+
+	<!-- 
+		On stage object data, text fields, etc
+		the target attrib of a <text> tag corresponts to a text field named "value_txt"
+	 -->
+	<pagecontent>
+		<!-- title, body, bodyleft and bodyright are adjusted based on page size and page borders -->
+		<text target="title"><![CDATA[Dynamic, term cards]]></text>
+		<text target="body"><![CDATA[getlatin:100:200]]></text>
+		<text target="bodyleft"><![CDATA[]]></text>
+		<text target="bodyright"><![CDATA[]]></text>
+	</pagecontent>
+
+	<!-- Intearction data here -->
+	<interaction>
+		<list id="list1">
+			<settings>
+				<!--<itemsize>760</itemsize>
+				<itemposition>10,150</itemposition>-->
+			</settings>
+			<item id="item1">
+				<style>green</style>
+				<title><![CDATA[Item item item 1]]></title>
+				<text><![CDATA[getlatin:20:50]]></text>
+				<front url="assets/card_front.jpg" />
+				<back url="assets/card_back.jpg" />
+			</item>
+			<item id="item2">
+				<style>blue</style>
+				<title><![CDATA[Item item item 2Item item item 2]]></title>
+				<text><![CDATA[getlatin:20:50]]></text>
+			</item>
+			<item id="item3">
+				<style>brown</style>
+				<title><![CDATA[Item item item 3Item item item 3Item item item 3]]></title>
+				<text><![CDATA[getlatin:20:50]]></text>
+			</item>
+			<item id="item4">
+				<style>red</style>
+				<title><![CDATA[Item item item 4Item item item 4]]></title>
+				<text><![CDATA[getlatin:20:50]]></text>
+			</item>
+			<item id="item5">
+				<style>orange</style>
+				<title><![CDATA[Item item item 5Item item item 3Item item item 5]]></title>
+				<text><![CDATA[getlatin:20:50]]></text>
+			</item>
+			<item id="item6">
+				<style>grey</style>
+				<title><![CDATA[Item item item 6Item item item 3Item item item 6]]></title>
+				<text><![CDATA[getlatin:20:50]]></text>
+			</item>
+		</list>
+	</interaction>
+
+</page>

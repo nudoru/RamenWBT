@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<page>
+	
+	<config>
+		<!-- name of the page -->
+		<name>Testing Page</name>
+		<!-- type of page -->
+		<type>testing</type>
+		<!-- size -->
+		<pagesize>777,510</pagesize>
+		<!-- left, top, right, bottom -->
+		<pageborders>10,10,10,10</pageborders>
+		<!-- background image for the page -->
+		<pagebgimage></pagebgimage>
+		<!-- is this template running out side of the player? -->
+		<standalone>true</standalone>
+	</config>
+
+	<!-- 
+		On stage object data, text fields, etc
+		the target attrib of a <text> tag corresponts to a text field named "value_txt"
+	 -->
+	<pagecontent>
+		<!-- title, body, bodyleft and bodyright are adjusted based on page size and page borders -->
+		<text target="title"><![CDATA[Matching Spots Question 1 of 1]]></text>
+		<text target="body"><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet, tellus quis interdum dapibus, augue augue molestie nisl, id tristique dui neque sit amet leo. Sed hendrerit. Vivamus tempus, urna non interdum interdum, diam ligula vestibulum risus, in porta elit lectus eu eros. Cras ac justo. Ut diam. Phasellus tristique magna quis sem. Praesent facilisis. Sed consectetur. Integer eu enim. Donec nec dolor sed orci fringilla sagittis. ]]></text>
+		<text target="bodyleft"><![CDATA[]]></text>
+		<text target="bodyright"><![CDATA[]]></text>
+	</pagecontent>
+
+	<!-- Intearction data here -->
+	<interaction>
+		<question type="matching" subtype="matching" id="sach.sht.screen05">
+			<prompt><![CDATA[Question Prompt]]></prompt>
+			<instruction><![CDATA[Instructions for the question]]></instruction>
+			<settings>
+				<tries>2</tries>
+				<autosizeparts>true</autosizeparts>
+				<randomizechoices>true</randomizechoices>
+				<feedbacktype>popup_scrolling</feedbacktype>
+				<allowincorrectmatches>true</allowincorrectmatches>
+				<resetonwa retainca="true">true</resetonwa>
+				<showanswers>true</showanswers>
+			</settings>
+			<cafeedback><![CDATA[Correct!]]></cafeedback>
+			<wafeedback><![CDATA[Try again ...]]></wafeedback>
+			<wafeedback><![CDATA[Incorrect!]]></wafeedback>
+			<match id="match1">Text</match>
+			<!--
+				<match>x_location,y_location@width,height</match>
+			-->
+			<choice correct="true" id="choice1">
+				<text><![CDATA[Choice 1]]></text>
+				<match>406,111@122,80</match>
+			</choice>
+			<choice correct="false" id="choice2">
+				<text><![CDATA[Choice 2]]></text>
+				<match>406,206@122,80</match>
+			</choice>
+			<choice correct="true" id="choice3">
+				<text><![CDATA[Choice 3]]></text>
+				<match>388,300@153,153</match>
+			</choice>
+			<choice correct="false" id="choice4">
+				<text><![CDATA[Choice 4]]></text>
+				<match>549,358@52,37</match>
+			</choice>
+			<choice correct="false" id="choice5">
+				<text><![CDATA[Choice 5]]></text>
+				<match>205,335@122,80</match>
+			</choice>
+			<choice correct="false" id="choice6">
+				<text><![CDATA[Choice 6]]></text>
+				<match>608,335@122,80</match>
+			</choice>
+		</question>
+	</interaction>
+
+	<!-- Page Objects go here -->
+	<sheet>
+	</sheet>
+	
+</page>
